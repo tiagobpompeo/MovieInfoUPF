@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="White"
+             x:Class="MoviesInfo.Views.SplashScreen">
+    <ContentPage.Content>
+        <StackLayout Padding="20,100,20,20" Spacing="10">
+            <Image Source="movieSplash.jpg"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center" />
+            <ActivityIndicator Color="Teal"
+                               IsRunning="True"
+                               HorizontalOptions="Center"
+                               WidthRequest="30"
+                               HeightRequest="30" 
+                               IsVisible="true"/>
+            <Label Text="Carregando..." 
+                   TextColor="Black" 
+                   HorizontalTextAlignment="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

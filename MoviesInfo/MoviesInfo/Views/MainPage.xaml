@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MoviesInfo"
+             Title="Main Page"
+             Icon="hamburger.png"
+             BackgroundColor="WhiteSmoke"
+             x:Class="MoviesInfo.Views.MainPage">
+
+    <StackLayout Padding="20,20,20,20">
+        <!-- Place new controls here -->
+        <Label x:Name="lblWelcome" Text="Movies Info" 
+           HorizontalTextAlignment="Center"/>
+        <Entry Placeholder="Digite seu Nome Aqui" TextChanged="Entry_TextChanged" />
+        <Button Text="Click Me" Clicked="Button_Clicked" />
+        <Slider Minimum="0" Maximum="1" />
+        <Switch IsToggled="false" />
+    </StackLayout>
+
+</ContentPage>
