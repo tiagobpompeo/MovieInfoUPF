@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MoviesInfo.Layouts;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,10 +18,16 @@ namespace MoviesInfo.Views
             InitializeComponent();
         }
 
-        public void IrMainPage(object obj, EventArgs args)
+        public async void IrMainPage(object obj, EventArgs args)
         {
-
+            await Navigation.PushModalAsync(new MasterDetail(0));
         }
+
+        public async void IrLayouts(object obj, EventArgs args)
+        {
+            await Navigation.PushModalAsync(new MasterDetail(1));
+        }
+        
 
     }
 }

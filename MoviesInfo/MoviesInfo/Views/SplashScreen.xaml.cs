@@ -22,7 +22,7 @@ namespace MoviesInfo.Views
         {
             await Task.Delay(3000);
             //await Navigation.PushModalAsync(new Views.MainPage());
-            await Navigation.PushModalAsync(new Views.MasterDetail());
+            await Navigation.PushModalAsync(new Views.MasterDetail(0));
         }
     }
 }

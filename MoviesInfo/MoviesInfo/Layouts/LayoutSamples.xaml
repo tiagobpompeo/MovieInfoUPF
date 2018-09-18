@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MoviesInfo.Layouts.LayoutSamples">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="5" Padding="5,20,5,20">
+            <Button Text="ContentView" 
+                    TextColor="DarkBlue"
+                    HeightRequest="40"
+                    Clicked="ContentView"
+                    VerticalOptions="Center"
+                    HorizontalOptions="StartAndExpand" 
+                    FontSize="10"
+                    BackgroundColor="Transparent"/>
+            <Button Text="Frame" 
+                    TextColor="DarkBlue"
+                    HeightRequest="40"
+                    Clicked="Frame"
+                    VerticalOptions="Center"
+                    HorizontalOptions="StartAndExpand" 
+                    FontSize="10"
+                    BackgroundColor="Transparent"/>
+            <Button Text="ScroollView"  
+                    TextColor="DarkBlue"
+                    Clicked="ScroollView"
+                    HeightRequest="40"
+                    VerticalOptions="Center"
+                     HorizontalOptions="StartAndExpand"  
+                    FontSize="10"
+                    BackgroundColor="Transparent"/>
+            <Button Text="StackLayout"  
+                    TextColor="DarkBlue"
+                    HeightRequest="40"
+                    Clicked="StackLayout"
+                    VerticalOptions="Center"
+                    HorizontalOptions="StartAndExpand" 
+                    FontSize="10"
+                    BackgroundColor="Transparent"/>
+            <Button Text="AbsoluteLayout"  
+                    TextColor="DarkBlue"
+                    HeightRequest="40"
+                    Clicked="AbsoluteLayout"
+                    VerticalOptions="Center"
+                    HorizontalOptions="StartAndExpand" 
+                    FontSize="10"
+                    BackgroundColor="Transparent"/>
+            <Button Text="Grid"  
+                    TextColor="DarkBlue"
+                    HeightRequest="40"
+                    Clicked="Grid"
+                    VerticalOptions="Center"
+                    HorizontalOptions="StartAndExpand" 
+                    FontSize="10"
+                    BackgroundColor="Transparent"/>
+            <Button Text="FlexLayout"  
+                    TextColor="DarkBlue"
+                    HeightRequest="40"
+                    Clicked="FlexLayout"
+                    VerticalOptions="Center"
+                    HorizontalOptions="StartAndExpand" 
+                    FontSize="10"
+                    BackgroundColor="Transparent"/>
+            <Button Text="RelativeLayout"  
+                    TextColor="DarkBlue"
+                    HeightRequest="40"
+                    Clicked="RelativeLayout"
+                    VerticalOptions="Center"
+                    HorizontalOptions="StartAndExpand" 
+                    FontSize="10"
+                    BackgroundColor="Transparent"/>
+
+           </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

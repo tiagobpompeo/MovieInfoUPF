@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MoviesInfo.Layouts;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,11 +13,21 @@ namespace MoviesInfo.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MasterDetail : MasterDetailPage
     {
-        public MasterDetail()
+        public MasterDetail(int page)
         {
             InitializeComponent();
             //this.Detail = new MainPage();
-            Detail = new NavigationPage(new MainPage());//Gera o Icon Hamburger
+
+            if (page==0)
+            {
+                Detail = new NavigationPage(new MainPage());//Gera o Icon Hamburger
+            }
+
+            if (page == 1)
+            {
+                Detail = new NavigationPage(new LayoutSamples());//Gera o Icon Hamburger
+            }
+
 
         }
     }

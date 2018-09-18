@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MoviesInfo.Layouts;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,9 +28,9 @@ namespace MoviesInfo.Views
 
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private async void Button_Clicked(object sender, EventArgs e)
         {
-
+          
         }
     }
 }

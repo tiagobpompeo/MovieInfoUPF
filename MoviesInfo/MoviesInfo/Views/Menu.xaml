@@ -5,12 +5,16 @@
               Icon="hamburger.png"
              x:Class="MoviesInfo.Views.Menu">
     <ContentPage.Content>
-        <StackLayout>
-            <Button Text="Ir Para MainPage" 
+        <StackLayout Spacing="5" Padding="5,30,5,20">
+            <Button Text="Main Page" 
                     TextColor="DarkBlue"
                     Clicked="IrMainPage"
-                    HorizontalOptions="CenterAndExpand"
-                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="Start"
+                    BackgroundColor="Transparent"/>
+            <Button Text="Tipos Layouts" 
+                    TextColor="DarkBlue"
+                    Clicked="IrLayouts"
+                    HorizontalOptions="Start"
                     BackgroundColor="Transparent"/>
         </StackLayout>
     </ContentPage.Content>

@@ -15,6 +15,7 @@
         <Button Text="Click Me" Clicked="Button_Clicked" />
         <Slider Minimum="0" Maximum="1" />
         <Switch IsToggled="false" />
+
     </StackLayout>
 
 </ContentPage>
