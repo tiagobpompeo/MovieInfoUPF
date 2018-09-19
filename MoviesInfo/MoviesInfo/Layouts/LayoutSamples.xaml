@@ -1,16 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MoviesInfo.Layouts.LayoutSamples">
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout Spacing="5" Padding="5,20,5,20">
+            <StackLayout HorizontalOptions="Center" Spacing="5" Padding="5,20,5,20">
+                
+                <Label HorizontalOptions="Center" Text="Clique para ver o Layout desejado"/>
+                <BoxView HeightRequest="1" HorizontalOptions="FillAndExpand" Color="Red"/>
             <Button Text="ContentView" 
                     TextColor="DarkBlue"
                     HeightRequest="40"
                     Clicked="ContentView"
                     VerticalOptions="Center"
-                    HorizontalOptions="StartAndExpand" 
+                    HorizontalOptions="Center" 
                     FontSize="10"
                     BackgroundColor="Transparent"/>
             <Button Text="Frame" 
@@ -18,7 +21,7 @@
                     HeightRequest="40"
                     Clicked="Frame"
                     VerticalOptions="Center"
-                    HorizontalOptions="StartAndExpand" 
+                    HorizontalOptions="Center" 
                     FontSize="10"
                     BackgroundColor="Transparent"/>
             <Button Text="ScroollView"  
@@ -26,7 +29,7 @@
                     Clicked="ScroollView"
                     HeightRequest="40"
                     VerticalOptions="Center"
-                     HorizontalOptions="StartAndExpand"  
+                     HorizontalOptions="Center"  
                     FontSize="10"
                     BackgroundColor="Transparent"/>
             <Button Text="StackLayout"  
@@ -34,7 +37,7 @@
                     HeightRequest="40"
                     Clicked="StackLayout"
                     VerticalOptions="Center"
-                    HorizontalOptions="StartAndExpand" 
+                    HorizontalOptions="Center" 
                     FontSize="10"
                     BackgroundColor="Transparent"/>
             <Button Text="AbsoluteLayout"  
@@ -42,7 +45,7 @@
                     HeightRequest="40"
                     Clicked="AbsoluteLayout"
                     VerticalOptions="Center"
-                    HorizontalOptions="StartAndExpand" 
+                    HorizontalOptions="Center" 
                     FontSize="10"
                     BackgroundColor="Transparent"/>
             <Button Text="Grid"  
@@ -50,7 +53,7 @@
                     HeightRequest="40"
                     Clicked="Grid"
                     VerticalOptions="Center"
-                    HorizontalOptions="StartAndExpand" 
+                    HorizontalOptions="Center" 
                     FontSize="10"
                     BackgroundColor="Transparent"/>
             <Button Text="FlexLayout"  
@@ -58,7 +61,7 @@
                     HeightRequest="40"
                     Clicked="FlexLayout"
                     VerticalOptions="Center"
-                    HorizontalOptions="StartAndExpand" 
+                    HorizontalOptions="Center" 
                     FontSize="10"
                     BackgroundColor="Transparent"/>
             <Button Text="RelativeLayout"  
@@ -66,7 +69,7 @@
                     HeightRequest="40"
                     Clicked="RelativeLayout"
                     VerticalOptions="Center"
-                    HorizontalOptions="StartAndExpand" 
+                    HorizontalOptions="Center" 
                     FontSize="10"
                     BackgroundColor="Transparent"/>
 
