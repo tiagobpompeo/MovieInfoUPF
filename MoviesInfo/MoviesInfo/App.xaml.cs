@@ -22,8 +22,7 @@ namespace MoviesInfo
 
         protected override void OnSleep()
         {
-            // Handle when your app sleeps
-            // Handle when your app sleeps
+           // Handle when your app sleeps
             Application.Current.Properties["appName"] = "MoviesInfo";//gravar persistencia de dados
         }
 

@@ -28,6 +28,11 @@ namespace MoviesInfo.Views
                 Detail = new NavigationPage(new LayoutSamples());//Gera o Icon Hamburger
             }
 
+            if (page == 2)
+            {
+                Detail = new NavigationPage(new MyFavoriteMovie());//Gera o Icon Hamburger
+            }
+
 
         }
     }

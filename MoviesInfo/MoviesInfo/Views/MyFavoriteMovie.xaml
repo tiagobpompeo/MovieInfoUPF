@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             Title="My Movie"
+             x:Class="MoviesInfo.Views.MyFavoriteMovie">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="10" Padding="0,0,0,0">
+                <ffimageloading:CachedImage x:Name="ImgBig" 
+                                            HorizontalOptions="FillAndExpand" 
+                                            VerticalOptions="FillAndExpand" 
+                                            Aspect="Fill" 
+                                            Source="predator.jpg"
+                                            HeightRequest="250">
+                </ffimageloading:CachedImage>
+                <Grid BackgroundColor="White" RowSpacing="5" Padding="10,5,10,20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="1" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" x:Name="Title" Text="Title : Piada" Grid.Column="0" FontSize="Small" TextColor="Gray" HorizontalOptions="Start" FontAttributes="Bold" />
+                    <Label Grid.Row="1" x:Name="Genre" Text="Genre : Romance" Grid.Column="0" FontSize="Small" TextColor="Gray" HorizontalOptions="Start" FontAttributes="Bold" />
+                    <Label Grid.Row="2" x:Name="Release" Text="Release: 29/09/2018" Grid.Column="0" FontSize="Small" TextColor="Gray" HorizontalOptions="Start" FontAttributes="Bold" />
+                    <BoxView Grid.Row="3" Grid.Column="0" WidthRequest="1" HeightRequest="1" Color="Black" />
+                    <Label Grid.Row="4" x:Name="OverviewTitle" Text="Overview" Grid.Column="0" FontSize="Large" TextColor="Black" HorizontalOptions="Start" FontAttributes="Bold" />
+                    <Label Grid.Row="5" x:Name="OverView" 
+                           HorizontalTextAlignment="Start" 
+                           Text="Predator is a 1987 American
+                           science fiction horror action film directed by John McTiernan
+                           and written by brothers Jim and John Thomas.[4] It stars Arnold 
+                           Schwarzenegger as the leader of an elite military rescue team on 
+                           a mission to save hostages in guerrilla-held territory in an unspecified country
+                           in Central America.[notes 1] Kevin Peter Hall co-stars as the eponymous antagonist,
+                           a technologically advanced form of extra-terrestrial life secretly stalking and
+                           hunting the team. Predator was written in 1984, under the working title of Hunter.
+                           Filming ran from March-June 1986 and creature effects were devised by Stan Winston. "
+                           Grid.Column="0"
+                           FontSize="Small"
+                           Grid.ColumnSpan="2" 
+                           VerticalOptions="FillAndExpand" 
+                           HorizontalOptions="StartAndExpand" />
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

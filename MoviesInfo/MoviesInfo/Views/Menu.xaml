@@ -16,6 +16,12 @@
                     Clicked="IrLayouts"
                     HorizontalOptions="Start"
                     BackgroundColor="Transparent"/>
+            
+            <Button Text="Meu Filme Favorito" 
+                    TextColor="DarkBlue"
+                    Clicked="IrFavorito"
+                    HorizontalOptions="Start"
+                    BackgroundColor="Transparent"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

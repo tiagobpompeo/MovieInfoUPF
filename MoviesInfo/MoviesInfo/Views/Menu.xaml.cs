@@ -27,7 +27,12 @@ namespace MoviesInfo.Views
         {
             await Navigation.PushModalAsync(new MasterDetail(1));
         }
-        
+
+        public async void IrFavorito(object obj, EventArgs args)
+        {
+            await Navigation.PushModalAsync(new MasterDetail(2));
+        }
+
 
     }
 }
