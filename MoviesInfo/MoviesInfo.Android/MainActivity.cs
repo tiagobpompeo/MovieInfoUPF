@@ -17,7 +17,7 @@ namespace MoviesInfo.Droid
         {
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
-            CachedImageRenderer.Init(true);
+            FFImageLoading.Forms.Platform.CachedImageRenderer.Init(true);
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
