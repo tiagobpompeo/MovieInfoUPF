@@ -4,7 +4,7 @@
              BackgroundColor="White"
              x:Class="MoviesInfo.Views.SplashScreen">
     <ContentPage.Content>
-        <StackLayout Padding="20,100,20,20" Spacing="10">
+        <StackLayout Padding="20,150,20,20" Spacing="10">
             <Image Source="movieSplash.jpg"
                    VerticalOptions="Center"
                    HorizontalOptions="Center" />

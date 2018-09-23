@@ -7,10 +7,10 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Spacing="10" Padding="0,0,0,0">
-                <ffimageloading:CachedImage x:Name="ImgBig" 
-                                            HorizontalOptions="FillAndExpand" 
-                                            VerticalOptions="FillAndExpand" 
-                                            Aspect="Fill" 
+                <ffimageloading:CachedImage x:Name="ImgBig"
+                                            Aspect="Fill"
+                                            HorizontalOptions="CenterAndExpand" 
+                                            VerticalOptions="FillAndExpand"
                                             Source="predator.jpg"
                                             HeightRequest="250">
                 </ffimageloading:CachedImage>
