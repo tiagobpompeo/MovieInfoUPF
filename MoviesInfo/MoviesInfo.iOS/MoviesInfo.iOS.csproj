@@ -182,4 +182,16 @@
   <ItemGroup>
     <BundleResource Include="Resources\Icon-App-20x20%403x.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Banana.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\FacePalm.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\monkey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\SeatedMonkey.jpg" />
+  </ItemGroup>
 </Project>
