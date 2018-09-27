@@ -1,4 +1,5 @@
-﻿using MoviesInfo.Layouts;
+﻿using FFImageLoading.Forms;
+using MoviesInfo.Layouts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace MoviesInfo.Views
             if (Application.Current.Properties.ContainsKey("appName"))
             {
                 var nameApp = Application.Current.Properties["appName"];
-                lblWelcome.Text = nameApp.ToString();
+                //lblWelcome.Text = nameApp.ToString();
 
             }
         }
@@ -32,5 +33,14 @@ namespace MoviesInfo.Views
         {
           
         }
+
+        private async void FotoTapped(object sender, EventArgs e)
+        {
+            var id =  (CachedImage)sender;
+            await Navigation.PushAsync(new MovieDetail());
+            await DisplayAlert("Imagem Clicada","","OK");
+        }
+
+
     }
 }

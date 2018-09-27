@@ -2,20 +2,45 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:MoviesInfo"
+             xmlns:templates="clr-namespace:MoviesInfo.Views.Templates"
              Title="Main Page"
              Icon="hamburger.png"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              BackgroundColor="WhiteSmoke"
              x:Class="MoviesInfo.Views.MainPage">
 
-    <StackLayout Padding="20,20,20,20">
-        <!-- Place new controls here -->
-        <Label x:Name="lblWelcome" Text="Movies Info" 
-           HorizontalTextAlignment="Center"/>
-        <Entry Placeholder="Digite seu Nome Aqui" TextChanged="Entry_TextChanged" />
-        <Button Text="Click Me" Clicked="Button_Clicked" />
-        <Slider Minimum="0" Maximum="1" />
-        <Switch IsToggled="false" />
-
-    </StackLayout>
-
+   
+    <ScrollView>
+        <StackLayout Padding="20,20,20,20">
+            <ffimageloading:CachedImage HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  Source="rocky.jpg">
+                <ffimageloading:CachedImage.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="FotoTapped" 
+                                          CommandParameter="1"
+                                          NumberOfTapsRequired="1" />
+                </ffimageloading:CachedImage.GestureRecognizers>
+            </ffimageloading:CachedImage>
+            <ffimageloading:CachedImage HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"   Source="pianista.jpg">
+                <ffimageloading:CachedImage.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="FotoTapped" 
+                                          CommandParameter="2"
+                                          NumberOfTapsRequired="1" />
+                </ffimageloading:CachedImage.GestureRecognizers>
+            </ffimageloading:CachedImage>
+            <ffimageloading:CachedImage HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  Source="vidabella.jpg">
+                <ffimageloading:CachedImage.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="FotoTapped" 
+                                          CommandParameter="3"
+                                          NumberOfTapsRequired="1" />
+                </ffimageloading:CachedImage.GestureRecognizers>
+            </ffimageloading:CachedImage>
+            <ffimageloading:CachedImage HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  Source="orphan.jpg">
+                <ffimageloading:CachedImage.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="FotoTapped" 
+                                          CommandParameter="4"
+                                          NumberOfTapsRequired="1" />
+                </ffimageloading:CachedImage.GestureRecognizers>
+            </ffimageloading:CachedImage>
+           
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

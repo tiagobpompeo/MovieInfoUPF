@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              BackgroundColor="{StaticResource MenuBackgroundColor}"
+             x:Class="MoviesInfo.Views.Cadastro">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Grid>
+                    <!--<Image Source="profile2.png" HeightRequest="100" VerticalOptions="Fill" HorizontalOptions="Fill" Aspect="Fill" />-->
+                    <Grid Padding="20,40,10,40" ColumnSpacing="20">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Image HorizontalOptions="Center"
+                               Source="profile3.png"
+                               VerticalOptions="Center"
+                               Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="2"
+                               x:Name="dataFotoPerfil" Aspect="AspectFill"
+                               HeightRequest="100"
+                            WidthRequest="100">
+                        </Image>
+                        <Label x:Name="txtNom" FontSize="30" Grid.Row="0" Grid.Column="1" TextColor="White" HorizontalTextAlignment="Start" Grid.ColumnSpan="2" />
+                      
+                       </Grid>
+                </Grid>
+                <StackLayout Padding="20,10,20,10" Spacing="12">
+                    <ActivityIndicator HeightRequest="40" WidthRequest="40" x:Name="actInd" IsVisible="false" IsRunning="false" Color="#008cdc" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+                    <Label Text="Nome" TextColor="WhiteSmoke" FontSize="14">
+                    </Label>
+                    <Entry x:Name="txtNome" HeightRequest="40" FontSize="16" Keyboard="Text" />
+                    <Label FontSize="14" TextColor="WhiteSmoke" Text="Data Nascimento">
+                    </Label>
+                    <Entry HeightRequest="40" x:Name="txtDataNasc" FontSize="16" TextColor="Black" Keyboard="Numeric">
+                    </Entry>
+                    <Label FontSize="14" TextColor="WhiteSmoke" Text="Telefone">
+                    </Label>
+                    <Entry HeightRequest="45" x:Name="txtCelular" FontSize="16" Keyboard="Numeric">
+                        
+                    </Entry>
+                    <Label FontSize="14" TextColor="WhiteSmoke" Text="Gênero">
+                    </Label>
+                    <Picker BackgroundColor="White" x:Name="generoPicker">
+                        <Picker.Items>
+                            <x:String>Escolha o Gênero</x:String>
+                            <x:String>Masculino</x:String>
+                            <x:String>Feminino</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    <Label Text="Nacionalidade" TextColor="WhiteSmoke" FontSize="14"/>
+                    <Picker BackgroundColor="White" HeightRequest="40" HorizontalOptions="FillAndExpand" x:Name="nacionalidadePicker">
+                        <Picker.Items>
+                            <x:String>Escolha a Nacionalidade</x:String>
+                            <x:String>Brasileira</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    <Label x:Name="Estado" Text="Estado" TextColor="WhiteSmoke" FontSize="14">
+                    </Label>
+                    <Picker BackgroundColor="White" HeightRequest="40" HorizontalOptions="FillAndExpand" x:Name="Estados" />
+                    <Label Text="Cidade" TextColor="WhiteSmoke" FontSize="14">
+                    </Label>
+                    <Picker BackgroundColor="White" HeightRequest="40" HorizontalOptions="FillAndExpand" x:Name="Cidades" />
+                    <Label Text="Bairro" TextColor="WhiteSmoke" FontSize="14">
+                    </Label>
+                    <Entry x:Name="Bairro" HeightRequest="40" FontSize="16" TextColor="Black" Keyboard="Text" />
+                    <StackLayout Spacing="12" Padding="20,10,20,10">
+                        <Button CornerRadius="2" BackgroundColor="#008cdc" TextColor="White" Text="Atualizar"  />
+                        <Button BorderRadius="3" BackgroundColor="Red" TextColor="White" Text="Excluir Cadastro" />
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

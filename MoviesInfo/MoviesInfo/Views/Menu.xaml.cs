@@ -33,6 +33,19 @@ namespace MoviesInfo.Views
             await Navigation.PushModalAsync(new MasterDetail(2));
         }
 
+        public async void IrPaginaCodigo(object obj, EventArgs args)
+        {
+            await Navigation.PushModalAsync(new MasterDetail(3));
+        }
 
+        public async void IrPaginaXaml(object obj, EventArgs args)
+        {
+            await Navigation.PushModalAsync(new MasterDetail(4));
+        }
+
+        public async void IrCadastro(object obj, EventArgs args)
+        {
+            await Navigation.PushModalAsync(new MasterDetail(5));
+        }
     }
 }

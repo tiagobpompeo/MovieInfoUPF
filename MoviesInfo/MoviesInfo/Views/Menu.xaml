@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              BackgroundColor="{StaticResource MenuBackgroundColor}"
               Title="Menu"
               Icon="hamburger.png"
              x:Class="MoviesInfo.Views.Menu">
@@ -9,18 +10,33 @@
             <Button Text="Main Page" 
                     TextColor="DarkBlue"
                     Clicked="IrMainPage"
-                    HorizontalOptions="Start"
+                    HorizontalOptions="Center"
                     BackgroundColor="Transparent"/>
             <Button Text="Tipos Layouts" 
                     TextColor="DarkBlue"
                     Clicked="IrLayouts"
-                    HorizontalOptions="Start"
+                    HorizontalOptions="Center"
                     BackgroundColor="Transparent"/>
             
             <Button Text="Meu Filme Favorito" 
                     TextColor="DarkBlue"
                     Clicked="IrFavorito"
-                    HorizontalOptions="Start"
+                    HorizontalOptions="Center"
+                    BackgroundColor="Transparent"/>
+            <Button Text="Calculadora no Codigo" 
+                    TextColor="DarkBlue"
+                    Clicked="IrPaginaCodigo"
+                    HorizontalOptions="Center"
+                    BackgroundColor="Transparent"/>
+            <Button Text="Calculadora no XAML" 
+                    TextColor="DarkBlue"
+                    Clicked="IrPaginaXaml"
+                    HorizontalOptions="Center"
+                    BackgroundColor="Transparent"/>
+            <Button Text="Cadastro" 
+                    TextColor="DarkBlue"
+                    Clicked="IrCadastro"
+                    HorizontalOptions="Center"
                     BackgroundColor="Transparent"/>
         </StackLayout>
     </ContentPage.Content>
