@@ -1,46 +1,39 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:MoviesInfo"
-             xmlns:templates="clr-namespace:MoviesInfo.Views.Templates"
-             Title="Main Page"
-             Icon="hamburger.png"
-             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
-             BackgroundColor="WhiteSmoke"
-             x:Class="MoviesInfo.Views.MainPage">
-
-   
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:MoviesInfo" xmlns:templates="clr-namespace:MoviesInfo.Views.Templates" Title="Main Page" Icon="hamburger.png" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" BackgroundColor="WhiteSmoke" x:Class="MoviesInfo.Views.MainPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.Platforms>
+                <On Platform="iOS" Value="0, 10, 0, 0" />
+                <On Platform="Android" Value="0, 10, 0, 0" />
+                <On Platform="UWP" Value="0, 0, 0, 0" />
+            </OnPlatform.Platforms>
+        </OnPlatform>
+    </ContentPage.Padding>
     <ScrollView>
         <StackLayout Padding="20,20,20,20">
-            <ffimageloading:CachedImage HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  Source="rocky.jpg">
+            <ffimageloading:CachedImage HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="rocky.jpg">
                 <ffimageloading:CachedImage.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="FotoTapped" 
-                                          CommandParameter="1"
-                                          NumberOfTapsRequired="1" />
+                    <TapGestureRecognizer Tapped="FotoTapped" CommandParameter="1" NumberOfTapsRequired="1" />
                 </ffimageloading:CachedImage.GestureRecognizers>
             </ffimageloading:CachedImage>
-            <ffimageloading:CachedImage HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"   Source="pianista.jpg">
+            <BoxView HeightRequest="1" Color="Teal" HorizontalOptions="FillAndExpand" />
+            <ffimageloading:CachedImage HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="pianista.jpg">
                 <ffimageloading:CachedImage.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="FotoTapped" 
-                                          CommandParameter="2"
-                                          NumberOfTapsRequired="1" />
+                    <TapGestureRecognizer Tapped="FotoTapped" CommandParameter="2" NumberOfTapsRequired="1" />
                 </ffimageloading:CachedImage.GestureRecognizers>
             </ffimageloading:CachedImage>
-            <ffimageloading:CachedImage HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  Source="vidabella.jpg">
+            <BoxView HeightRequest="1" Color="Teal" HorizontalOptions="FillAndExpand" />
+            <ffimageloading:CachedImage HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="vidabella.jpg">
                 <ffimageloading:CachedImage.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="FotoTapped" 
-                                          CommandParameter="3"
-                                          NumberOfTapsRequired="1" />
+                    <TapGestureRecognizer Tapped="FotoTapped" CommandParameter="3" NumberOfTapsRequired="1" />
                 </ffimageloading:CachedImage.GestureRecognizers>
             </ffimageloading:CachedImage>
-            <ffimageloading:CachedImage HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  Source="orphan.jpg">
+            <BoxView HeightRequest="1" Color="Teal" HorizontalOptions="FillAndExpand" />
+            <ffimageloading:CachedImage HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="orphan.jpg">
                 <ffimageloading:CachedImage.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="FotoTapped" 
-                                          CommandParameter="4"
-                                          NumberOfTapsRequired="1" />
+                    <TapGestureRecognizer Tapped="FotoTapped" CommandParameter="4" NumberOfTapsRequired="1" />
                 </ffimageloading:CachedImage.GestureRecognizers>
             </ffimageloading:CachedImage>
-           
         </StackLayout>
     </ScrollView>
 </ContentPage>

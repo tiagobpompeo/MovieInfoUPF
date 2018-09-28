@@ -157,12 +157,43 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\MoviesInfo\MoviesInfo.csproj">
-      <Project>{196E0600-D6DC-4D90-8199-A69D4D2E7DE9}</Project>
+      <Project>{ECEDD97A-577C-4B65-8393-6E7104D99662}</Project>
       <Name>MoviesInfo</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\movieSplash.jpg" />
+    <BundleResource Include="Resources\add.png" />
+    <BundleResource Include="Resources\bojack.jpg" />
+    <BundleResource Include="Resources\braveheart.jpg" />
+    <BundleResource Include="Resources\check.png" />
+    <BundleResource Include="Resources\conan.jpg" />
+    <BundleResource Include="Resources\coverbackground.png" />
+    <BundleResource Include="Resources\defenders.jpg" />
+    <BundleResource Include="Resources\dots.png" />
+    <BundleResource Include="Resources\download.png" />
+    <BundleResource Include="Resources\edit.png" />
+    <BundleResource Include="Resources\familyguy.jpg" />
+    <BundleResource Include="Resources\indomable.jpg" />
+    <BundleResource Include="Resources\information.png" />
+    <BundleResource Include="Resources\list.png" />
+    <BundleResource Include="Resources\menu.png" />
+    <BundleResource Include="Resources\netflix.png" />
+    <BundleResource Include="Resources\orphan.jpg" />
+    <BundleResource Include="Resources\ozark.jpg" />
+    <BundleResource Include="Resources\pianista.jpg" />
+    <BundleResource Include="Resources\pianistbackground.jpg" />
+    <BundleResource Include="Resources\play.png" />
+    <BundleResource Include="Resources\profile1.png" />
+    <BundleResource Include="Resources\profile2.png" />
+    <BundleResource Include="Resources\profile3.png" />
+    <BundleResource Include="Resources\profile4.png" />
+    <BundleResource Include="Resources\rate.png" />
+    <BundleResource Include="Resources\rocky.jpg" />
+    <BundleResource Include="Resources\search.png" />
+    <BundleResource Include="Resources\share.png" />
+    <BundleResource Include="Resources\splash_logo.png" />
+    <BundleResource Include="Resources\vidabella.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\hamburger.png" />
