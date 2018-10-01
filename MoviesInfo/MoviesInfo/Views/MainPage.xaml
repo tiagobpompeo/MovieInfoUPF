@@ -45,9 +45,9 @@
         </StackLayout>
     </ScrollView>-->
     <StackLayout>
-    <RelativeLayout HeightRequest="90">
+        <RelativeLayout HeightRequest="140">
             <ListView Rotation                        ="270"
-                      RowHeight                       ="200"
+                      RowHeight                       ="140"
                       VerticalOptions                 ="FillAndExpand"
                       CachingStrategy                 ="RecycleElement"
                       HorizontalOptions               ="FillAndExpand"
@@ -62,7 +62,10 @@
                             <ContentView Rotation        ="90"
                                          BackgroundColor ="Transparent"
                                          Padding         ="0">
-             <ffimageloading:CachedImage HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="pianista.jpg">
+             <ffimageloading:CachedImage HorizontalOptions="FillAndExpand"
+                                         HeightRequest="140"
+                                         VerticalOptions="FillAndExpand" 
+                                         Source="pianista.jpg">
                 <ffimageloading:CachedImage.GestureRecognizers>
                     <TapGestureRecognizer Tapped="FotoTapped" CommandParameter="2" NumberOfTapsRequired="1" />
                 </ffimageloading:CachedImage.GestureRecognizers>
@@ -76,10 +79,10 @@
                 </ListView.Effects>
             </ListView>
         </RelativeLayout>
-    
-     <RelativeLayout HeightRequest="90">
+
+        <RelativeLayout HeightRequest="140">
             <ListView Rotation                        ="270"
-                      RowHeight                       ="200"
+                      RowHeight                       ="140"
                       VerticalOptions                 ="FillAndExpand"
                       CachingStrategy                 ="RecycleElement"
                       HorizontalOptions               ="FillAndExpand"
@@ -87,18 +90,21 @@
                       RelativeLayout.YConstraint      ="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=-0.5,Constant=45}"
                       RelativeLayout.WidthConstraint  ="{ConstraintExpression Type=Constant,Constant=90}"
                       RelativeLayout.HeightConstraint ="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}"
-                      x:Name="Lista2">
+                      x:Name="Lista1">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <ContentView Rotation        ="90"
                                          BackgroundColor ="Transparent"
                                          Padding         ="0">
-              <ffimageloading:CachedImage HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="vidabella.jpg">
-                <ffimageloading:CachedImage.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="FotoTapped" CommandParameter="3" NumberOfTapsRequired="1" />
-                </ffimageloading:CachedImage.GestureRecognizers>
-            </ffimageloading:CachedImage>
+                                <ffimageloading:CachedImage HorizontalOptions="FillAndExpand"
+                                         HeightRequest="140"
+                                         VerticalOptions="FillAndExpand" 
+                                         Source="pianista.jpg">
+                                    <ffimageloading:CachedImage.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="FotoTapped" CommandParameter="2" NumberOfTapsRequired="1" />
+                                    </ffimageloading:CachedImage.GestureRecognizers>
+                                </ffimageloading:CachedImage>
                             </ContentView>
                         </ViewCell>
                     </DataTemplate>
@@ -108,10 +114,11 @@
                 </ListView.Effects>
             </ListView>
         </RelativeLayout>
-    
-     <RelativeLayout HeightRequest="90">
+
+
+        <RelativeLayout HeightRequest="140">
             <ListView Rotation                        ="270"
-                      RowHeight                       ="200"
+                      RowHeight                       ="140"
                       VerticalOptions                 ="FillAndExpand"
                       CachingStrategy                 ="RecycleElement"
                       HorizontalOptions               ="FillAndExpand"
@@ -119,18 +126,21 @@
                       RelativeLayout.YConstraint      ="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=-0.5,Constant=45}"
                       RelativeLayout.WidthConstraint  ="{ConstraintExpression Type=Constant,Constant=90}"
                       RelativeLayout.HeightConstraint ="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}"
-                      x:Name="Lista3">
+                      x:Name="Lista1">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <ContentView Rotation        ="90"
                                          BackgroundColor ="Transparent"
                                          Padding         ="0">
-              <ffimageloading:CachedImage HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="orphan.jpg">
-                <ffimageloading:CachedImage.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="FotoTapped" CommandParameter="4" NumberOfTapsRequired="1" />
-                </ffimageloading:CachedImage.GestureRecognizers>
-            </ffimageloading:CachedImage>
+                                <ffimageloading:CachedImage HorizontalOptions="FillAndExpand"
+                                         HeightRequest="140"
+                                         VerticalOptions="FillAndExpand" 
+                                         Source="pianista.jpg">
+                                    <ffimageloading:CachedImage.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="FotoTapped" CommandParameter="2" NumberOfTapsRequired="1" />
+                                    </ffimageloading:CachedImage.GestureRecognizers>
+                                </ffimageloading:CachedImage>
                             </ContentView>
                         </ViewCell>
                     </DataTemplate>
@@ -140,5 +150,6 @@
                 </ListView.Effects>
             </ListView>
         </RelativeLayout>
-        </StackLayout>
+
+    </StackLayout>
 </ContentPage>

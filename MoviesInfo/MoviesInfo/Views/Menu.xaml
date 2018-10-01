@@ -11,7 +11,8 @@
     </ContentPage.Padding>
     
     <ContentPage.Content>
-        <StackLayout Spacing="5" HorizontalOptions="Center" Padding="5,45,5,20">
+        <ScrollView>
+            <StackLayout Spacing="5" HorizontalOptions="Center" Padding="5,45,5,20">
             <Button Text="Main Page" TextColor="White" Clicked="IrMainPage" HorizontalOptions="Center" BackgroundColor="Transparent" />
             <Button Text="Tipos Layouts" TextColor="White"  Clicked="IrLayouts" HorizontalOptions="Center" BackgroundColor="Transparent" />
             <Button Text="Meu Filme Favorito" TextColor="White" Clicked="IrFavorito" HorizontalOptions="Center" BackgroundColor="Transparent" />
@@ -19,5 +20,6 @@
             <Button Text="Calculadora no XAML" TextColor="White" Clicked="IrPaginaXaml" HorizontalOptions="Center" BackgroundColor="Transparent" />
             <Button Text="Cadastro" TextColor="White" Clicked="IrCadastro" HorizontalOptions="Center" BackgroundColor="Transparent" />
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
