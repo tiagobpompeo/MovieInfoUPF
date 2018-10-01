@@ -11,18 +11,69 @@ namespace MoviesInfo.Views
 {
     public partial class MainPage : ContentPage
     {
+        readonly List<int> teste = new List<int>();
+
+
         public MainPage()
         {
             InitializeComponent();
 
+            PopularLista();
+            Lista1.ItemsSource = teste;
+            Lista2.ItemsSource = teste;
+            Lista3.ItemsSource = teste;
+
+           
             //acessar dados gravados pelo OnSleep() da App.cs
             if (Application.Current.Properties.ContainsKey("appName"))
             {
                 var nameApp = Application.Current.Properties["appName"];
                 //lblWelcome.Text = nameApp.ToString();
-
             }
         }
+
+
+
+        private void PopularLista()
+        {
+            teste.Add(1);
+            teste.Add(2);
+            teste.Add(3);
+            teste.Add(4);
+            teste.Add(1);
+            teste.Add(2);
+            teste.Add(3);
+            teste.Add(4);
+            teste.Add(1);
+            teste.Add(2);
+            teste.Add(3);
+            teste.Add(4);
+            teste.Add(1);
+            teste.Add(2);
+            teste.Add(3);
+            teste.Add(4);
+            teste.Add(1);
+            teste.Add(2);
+            teste.Add(3);
+            teste.Add(4);
+            teste.Add(1);
+            teste.Add(2);
+            teste.Add(3);
+            teste.Add(4);
+            teste.Add(1);
+            teste.Add(2);
+            teste.Add(3);
+            teste.Add(1);
+            teste.Add(2);
+            teste.Add(3);
+            teste.Add(4);
+            teste.Add(1);
+            teste.Add(2);
+            teste.Add(3);
+            teste.Add(4);
+            teste.Add(4);
+        }
+
 
         private void Entry_TextChanged(object sender, TextChangedEventArgs e)
         {
