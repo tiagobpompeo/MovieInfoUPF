@@ -1,82 +1,83 @@
 ﻿using FFImageLoading.Forms;
 using MoviesInfo.Layouts;
+using MoviesInfo.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using MoviesInfo.Data;
 
 namespace MoviesInfo.Views
 {
     public partial class MainPage : ContentPage
     {
         readonly List<int> teste = new List<int>();
-        readonly IList<Movie> Filmes = new ObservableCollection<Movie>();
+        public readonly MoviesManager managerMovies = new MoviesManager();
+        readonly IList<Models.MoviesNewClass.Resultado> ListMovies = new ObservableCollection<Models.MoviesNewClass.Resultado>();
+        public int moviescount;
+        public string genreOut;
+        public string _poster_path;
+        public string _title;
+        public string _release_date;
+        public string _genresOut;
+
 
         public MainPage()
         {
             InitializeComponent();
-            //PopularLista();
-            //Lista1.ItemsSource = teste;         
-            //acessar dados gravados pelo OnSleep() da App.cs
+          
             if (Application.Current.Properties.ContainsKey("appName"))
             {
                 var nameApp = Application.Current.Properties["appName"];
                 //lblWelcome.Text = nameApp.ToString();
             }
 
-            LoadMovies();
-            BindingContext = Filmes;
+           
+            ReturnData();
+            BindingContext = ListMovies;
+                  
+           
+
         }
 
-        private void LoadMovies()
+        private async void ReturnData()
         {
-            int count = 1;
+            //var listGenres = await managerMovies.GetAllGenres();
+            var moviesCollection = await managerMovies.GetAll(1);//page 1//create command to continue...
 
-            do
+            if (moviesCollection.Results != null)
             {
-                Filmes.Add(new Movie
+                foreach (Models.MoviesNewClass.Resultado outView in moviesCollection.Results)
                 {
-                    Title = "O Pianista",
-                    BackgroundImage = "pianista.jpg"
-                });
+                   
+                    var genreIds = outView.Genre_ids;//list id genres of movie in upcoming compare to another list                   
 
-                count++;
-            } while (count==10);
+                    ListMovies.Add(new Models.MoviesNewClass.Resultado
+                    {
+                        Id = outView.Id,
+                        Poster_path = "https://image.tmdb.org/t/p/w200" + outView.Poster_path,
+                        Title = outView.Title,
+                        Release_date = outView.Release_date,
+                        //GenresOut = genreOut
+                    });
 
-        }
-
-        private void PopularLista()
-        {
-            teste.Add(1);
-            teste.Add(2);
-            teste.Add(3);
-            teste.Add(4);
-            teste.Add(1);
-            teste.Add(2);
-            teste.Add(3);
-            teste.Add(4);
-            teste.Add(1);
-            teste.Add(2);
-            teste.Add(3);
-            teste.Add(4);
-            teste.Add(1);
-            teste.Add(2);
-            teste.Add(3);
-            teste.Add(4);
+                }
+            }
 
         }
 
 
-
-
-        public async void FotoTapped(object sender, EventArgs e)
+        async void OnItemTapped(object sender, ItemTappedEventArgs e)
         {
-            var id = (CachedImage)sender;
-            await Navigation.PushAsync(new MovieDetail());
-            await DisplayAlert("Imagem Clicada", "", "OK");
+            if (e == null) return; // has been set to null, do not 'process' tapped event
+            Debug.WriteLine("Tapped: " + e.Item);
+            ((ListView)sender).SelectedItem = null; // de-select the row
+           await Navigation.PushAsync(new MovieDetail());
+
         }
 
 
