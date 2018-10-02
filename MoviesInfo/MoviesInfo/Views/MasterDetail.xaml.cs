@@ -21,7 +21,7 @@ namespace MoviesInfo.Views
 
             if (page==0)
             {
-                Detail = new NavigationPage(new MainPage());//Pagina Principal
+                Detail = new NavigationPage(new MainPage());//Pagina Principal               
             }
 
             if (page == 1)

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:MoviesInfo" xmlns:templates="clr-namespace:MoviesInfo.Views.Templates" Title="Main Page" Icon="hamburger.png" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" BackgroundColor="WhiteSmoke" x:Class="MoviesInfo.Views.MainPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:MoviesInfo" xmlns:templates="clr-namespace:MoviesInfo.Views.Templates" 
+             Title="Main Page" xmlns:controls="clr-namespace:MoviesInfo.CustomControls" Icon="hamburger.png" 
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" BackgroundColor="WhiteSmoke" x:Class="MoviesInfo.Views.MainPage">
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
             <OnPlatform.Platforms>
@@ -9,7 +13,8 @@
             </OnPlatform.Platforms>
         </OnPlatform>
     </ContentPage.Padding>
-    <!-- <ScrollView>
+   
+     <ScrollView>
         <StackLayout Padding="20,20,20,20">
             <ffimageloading:CachedImage HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="rocky.jpg">
                 <ffimageloading:CachedImage.GestureRecognizers>
@@ -35,73 +40,33 @@
                 </ffimageloading:CachedImage.GestureRecognizers>
             </ffimageloading:CachedImage>
         </StackLayout>
-    </ScrollView>-->
-    <ScrollView>
-        <StackLayout Spacing="10" Padding="0,10,0,10">
-            <RelativeLayout HeightRequest="300">
-                <ListView Rotation="270" RowHeight="300" VerticalOptions="FillAndExpand"
-                          CachingStrategy="RecycleElement" HorizontalOptions="FillAndExpand" 
-                          RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0.5,Constant=-100}"
-                          RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=-0.5,Constant=100}" 
-                          RelativeLayout.WidthConstraint="{ConstraintExpression Type=Constant,Constant=300}" RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}" x:Name="Lista1">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <ContentView Rotation="90" BackgroundColor="Transparent" HeightRequest="300" Padding="0">
-                                    <ffimageloading:CachedImage HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="pianista.jpg">
-                                        <ffimageloading:CachedImage.GestureRecognizers>
-                                            <TapGestureRecognizer Tapped="FotoTapped" CommandParameter="2" NumberOfTapsRequired="1" />
-                                        </ffimageloading:CachedImage.GestureRecognizers>
-                                    </ffimageloading:CachedImage>
-                                </ContentView>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                    <ListView.Effects>
-                        <local:NoScroll />
-                    </ListView.Effects>
-                </ListView>
-            </RelativeLayout>
-            <RelativeLayout HeightRequest="200">
-                <ListView Rotation="270" RowHeight="200" VerticalOptions="FillAndExpand" CachingStrategy="RecycleElement" HorizontalOptions="FillAndExpand" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0.5,Constant=-100}" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=-0.5,Constant=100}" RelativeLayout.WidthConstraint="{ConstraintExpression Type=Constant,Constant=200}" RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}" x:Name="Lista2">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <ContentView Rotation="90" BackgroundColor="Transparent" HeightRequest="200" Padding="0">
-                                    <ffimageloading:CachedImage HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="orphan.jpg">
-                                        <ffimageloading:CachedImage.GestureRecognizers>
-                                            <TapGestureRecognizer Tapped="FotoTapped" CommandParameter="2" NumberOfTapsRequired="1" />
-                                        </ffimageloading:CachedImage.GestureRecognizers>
-                                    </ffimageloading:CachedImage>
-                                </ContentView>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                    <ListView.Effects>
-                        <local:NoScroll />
-                    </ListView.Effects>
-                </ListView>
-            </RelativeLayout>
-            <RelativeLayout HeightRequest="200">
-                <ListView Rotation="270" RowHeight="200" VerticalOptions="FillAndExpand" CachingStrategy="RecycleElement" HorizontalOptions="FillAndExpand" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0.5,Constant=-100}" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=-0.5,Constant=100}" RelativeLayout.WidthConstraint="{ConstraintExpression Type=Constant,Constant=200}" RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}" x:Name="Lista3">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <ContentView Rotation="90" BackgroundColor="Transparent" HeightRequest="200" Padding="0">
-                                    <ffimageloading:CachedImage HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="vidabella.jpg">
-                                        <ffimageloading:CachedImage.GestureRecognizers>
-                                            <TapGestureRecognizer Tapped="FotoTapped" CommandParameter="2" NumberOfTapsRequired="1" />
-                                        </ffimageloading:CachedImage.GestureRecognizers>
-                                    </ffimageloading:CachedImage>
-                                </ContentView>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                    <ListView.Effects>
-                        <local:NoScroll />
-                    </ListView.Effects>
-                </ListView>
-            </RelativeLayout>
-        </StackLayout>
     </ScrollView>
+    
+    
+    <!-- <StackLayout Spacing="2" Padding="0,10,0,10">
+        <RelativeLayout HeightRequest="300">
+            <ListView Rotation="270" RowHeight="300" VerticalOptions="FillAndExpand" CachingStrategy="RecycleElement" 
+                      HorizontalOptions="FillAndExpand" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0.5,Constant=-150}" 
+                      RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=-0.5,Constant=150}"
+                      RelativeLayout.WidthConstraint="{ConstraintExpression Type=Constant,Constant=300}" 
+                      RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}" x:Name="Lista1">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ContentView Rotation="90" BackgroundColor="Transparent"  Padding="0">
+                                <ffimageloading:CachedImage HorizontalOptions="FillAndExpand" HeightRequest="300" VerticalOptions="FillAndExpand" Source="pianista.jpg">
+                                    <ffimageloading:CachedImage.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="FotoTapped" CommandParameter="2" NumberOfTapsRequired="1" />
+                                    </ffimageloading:CachedImage.GestureRecognizers>
+                                </ffimageloading:CachedImage>
+                            </ContentView>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <ListView.Effects>
+                    <local:NoScroll />
+                </ListView.Effects>
+            </ListView>
+        </RelativeLayout>
+    </StackLayout>-->
 </ContentPage>
