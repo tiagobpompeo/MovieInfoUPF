@@ -13,6 +13,9 @@ namespace MoviesInfo.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class MyFavoriteMovie : ContentPage
 	{
+      
+
+
 		public MyFavoriteMovie ()
 		{
 			InitializeComponent ();

@@ -75,8 +75,10 @@ namespace MoviesInfo.Views
         {
             if (e == null) return; // has been set to null, do not 'process' tapped event
             Debug.WriteLine("Tapped: " + e.Item);
+			var filmetodo = e.Item as Models.MoviesNewClass.Resultado;
+
             ((ListView)sender).SelectedItem = null; // de-select the row
-           await Navigation.PushAsync(new MovieDetail());
+			await Navigation.PushAsync(new MovieDetail(filmetodo.Id.ToString()));
 
         }
 
