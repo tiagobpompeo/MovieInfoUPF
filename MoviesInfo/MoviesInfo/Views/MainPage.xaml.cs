@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using MoviesInfo.Data;
+using MoviesInfo.Models;
 
 namespace MoviesInfo.Views
 {
@@ -36,13 +37,12 @@ namespace MoviesInfo.Views
                 //lblWelcome.Text = nameApp.ToString();
             }
 
-           
             ReturnData();
-            BindingContext = ListMovies;
-                  
+            BindingContext = ListMovies;               
            
 
         }
+
 
         private async void ReturnData()
         {

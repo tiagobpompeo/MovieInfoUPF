@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:templates="clr-namespace:MoviesInfo.Views.Templates"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             BackgroundColor="{StaticResource MenuBackgroundColor}"
-             Title="Menu" Icon="hamburger.png" x:Class="MoviesInfo.Views.Menu">
-    <ContentPage.Content>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" BackgroundColor="{StaticResource MenuBackgroundColor}" Title="Menu" Icon="hamburger.png" x:Class="MoviesInfo.Views.Menu">
+    <!--<ContentPage.Content>
         <StackLayout>
                     <Button Text="Main Page" TextColor="White" Clicked="IrMainPage" HorizontalOptions="Center" BackgroundColor="Transparent" />
                     <Button Text="Tipos Layouts" TextColor="White" Clicked="IrLayouts" HorizontalOptions="Center" BackgroundColor="Transparent" />
@@ -13,5 +9,62 @@
                     <Button Text="Calculadora no XAML" TextColor="White" Clicked="IrPaginaXaml" HorizontalOptions="Center" BackgroundColor="Transparent" />
                     <Button Text="Cadastro" TextColor="White" Clicked="IrCadastro" HorizontalOptions="Center" BackgroundColor="Transparent" />
                 </StackLayout>
+    </ContentPage.Content>-->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="ProfilePictureStyle" TargetType="Image">
+                <Setter Property="Aspect" Value="AspectFit" />
+                <Setter Property="WidthRequest" Value="48" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="Margin" Value="12" />
+            </Style>
+            <Style x:Key="ProfileTextStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid HeightRequest="64" Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Image Grid.Column="0" Source="profile3.png" Style="{StaticResource ProfilePictureStyle}" />
+                <Label Grid.Column="1" Text="Tiago" Style="{StaticResource ProfileTextStyle}" />
+                <Image Grid.Column="2" />
+                <Grid Grid.Column="0" Grid.ColumnSpan="3" HeightRequest="2" VerticalOptions="End" BackgroundColor="{StaticResource BlackColor}" />
+            </Grid>
+            <ListView Grid.Row="1" x:name="listMenu" ItemTapped="OnItemTapped" ItemsSource="{Binding}" BackgroundColor="{StaticResource MenuBackgroundColor}" SeparatorVisibility="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid HeightRequest="48">
+                                
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Image Grid.Row="0" Grid.Column="1" Source="{Binding Icon}" />
+                                <Label Grid.Row="0" Grid.Column="2" Text="{Binding Title}" TextColor="White" />
+                                <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" HeightRequest="2" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
