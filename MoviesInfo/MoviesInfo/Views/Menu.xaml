@@ -1,25 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" BackgroundColor="{StaticResource MenuBackgroundColor}" Title="Menu" Icon="hamburger.png" x:Class="MoviesInfo.Views.Menu">
-    <ContentPage.Padding>
-        <OnPlatform x:TypeArguments="Thickness">
-            <OnPlatform.Platforms>
-                <On Platform="iOS" Value="0, 50, 0, 0" />
-                <On Platform="Android" Value="0, 60, 0, 0" />
-                <On Platform="UWP" Value="0, 0, 0, 0" />
-            </OnPlatform.Platforms>
-        </OnPlatform>
-    </ContentPage.Padding>
-    
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:templates="clr-namespace:MoviesInfo.Views.Templates"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             BackgroundColor="{StaticResource MenuBackgroundColor}"
+             Title="Menu" Icon="hamburger.png" x:Class="MoviesInfo.Views.Menu">
     <ContentPage.Content>
-        <ScrollView>
-            <StackLayout Spacing="5" HorizontalOptions="Center" Padding="5,45,5,20">
-            <Button Text="Main Page" TextColor="White" Clicked="IrMainPage" HorizontalOptions="Center" BackgroundColor="Transparent" />
-            <Button Text="Tipos Layouts" TextColor="White"  Clicked="IrLayouts" HorizontalOptions="Center" BackgroundColor="Transparent" />
-            <Button Text="Meu Filme Favorito" TextColor="White" Clicked="IrFavorito" HorizontalOptions="Center" BackgroundColor="Transparent" />
-            <Button Text="Calculadora no Codigo" TextColor="White" Clicked="IrPaginaCodigo" HorizontalOptions="Center" BackgroundColor="Transparent" />
-            <Button Text="Calculadora no XAML" TextColor="White" Clicked="IrPaginaXaml" HorizontalOptions="Center" BackgroundColor="Transparent" />
-            <Button Text="Cadastro" TextColor="White" Clicked="IrCadastro" HorizontalOptions="Center" BackgroundColor="Transparent" />
-        </StackLayout>
-        </ScrollView>
+        <StackLayout>
+                    <Button Text="Main Page" TextColor="White" Clicked="IrMainPage" HorizontalOptions="Center" BackgroundColor="Transparent" />
+                    <Button Text="Tipos Layouts" TextColor="White" Clicked="IrLayouts" HorizontalOptions="Center" BackgroundColor="Transparent" />
+                    <Button Text="Meu Filme Favorito" TextColor="White" Clicked="IrFavorito" HorizontalOptions="Center" BackgroundColor="Transparent" />
+                    <Button Text="Calculadora no Codigo" TextColor="White" Clicked="IrPaginaCodigo" HorizontalOptions="Center" BackgroundColor="Transparent" />
+                    <Button Text="Calculadora no XAML" TextColor="White" Clicked="IrPaginaXaml" HorizontalOptions="Center" BackgroundColor="Transparent" />
+                    <Button Text="Cadastro" TextColor="White" Clicked="IrCadastro" HorizontalOptions="Center" BackgroundColor="Transparent" />
+                </StackLayout>
     </ContentPage.Content>
 </ContentPage>
