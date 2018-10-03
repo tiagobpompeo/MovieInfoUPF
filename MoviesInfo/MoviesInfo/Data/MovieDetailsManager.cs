@@ -36,7 +36,6 @@ namespace MoviesInfo.Data
             return JsonConvert.DeserializeObject<MovieDetailsClass>(content);
 
         }
-
        
     }
 }

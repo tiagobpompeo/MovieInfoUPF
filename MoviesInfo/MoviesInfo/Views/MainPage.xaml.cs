@@ -1,16 +1,9 @@
-﻿using FFImageLoading.Forms;
-using MoviesInfo.Layouts;
-using MoviesInfo.Models;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 using MoviesInfo.Data;
-using MoviesInfo.Models;
+using MoviesInfo.Services;
 
 namespace MoviesInfo.Views
 {
@@ -25,7 +18,9 @@ namespace MoviesInfo.Views
         public string _title;
         public string _release_date;
         public string _genresOut;
-
+        #region Services
+        private ApiService apiService;
+        #endregion
 
         public MainPage()
         {
@@ -36,16 +31,21 @@ namespace MoviesInfo.Views
                 var nameApp = Application.Current.Properties["appName"];
                 //lblWelcome.Text = nameApp.ToString();
             }
-
+            this.apiService = new ApiService();
             ReturnData();
-            BindingContext = ListMovies;               
-           
-
+            BindingContext = ListMovies;             
         }
 
 
         private async void ReturnData()
         {
+            var connection = await this.apiService.CheckConnection();
+
+            if (!connection.IsSuccess)
+            {
+                await Application.Current.MainPage.DisplayAlert("Conexão de Rede", connection.Message, "OK");
+                return;
+            }
             //var listGenres = await managerMovies.GetAllGenres();
             var moviesCollection = await managerMovies.GetAll(1);//page 1//create command to continue...
 
@@ -53,8 +53,7 @@ namespace MoviesInfo.Views
             {
                 foreach (Models.MoviesNewClass.Resultado outView in moviesCollection.Results)
                 {
-                   
-                    var genreIds = outView.Genre_ids;//list id genres of movie in upcoming compare to another list                   
+                   var genreIds = outView.Genre_ids;//list id genres of movie in upcoming compare to another list                   
 
                     ListMovies.Add(new Models.MoviesNewClass.Resultado
                     {
@@ -70,18 +69,13 @@ namespace MoviesInfo.Views
 
         }
 
-
         async void OnItemTapped(object sender, ItemTappedEventArgs e)
         {
             if (e == null) return; // has been set to null, do not 'process' tapped event
             Debug.WriteLine("Tapped: " + e.Item);
 			var filmetodo = e.Item as Models.MoviesNewClass.Resultado;
-
             ((ListView)sender).SelectedItem = null; // de-select the row
 			await Navigation.PushAsync(new MovieDetail(filmetodo.Id.ToString()));
-
         }
-
-
     }
 }

@@ -23,9 +23,10 @@ namespace MoviesInfo.Data
             return client;
         }
 
-
         public async Task<MoviesNewClass> GetAll(int page)
         {
+
+            
             this.page = page.ToString();
             HttpClient client = GetClient();
             var uri = new Uri(string.Format(Url + this.page.ToString(), string.Empty));

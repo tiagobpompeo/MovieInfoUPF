@@ -7,6 +7,7 @@ using MoviesInfo.Interfaces;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using MoviesInfo.Data;
+using MoviesInfo.Services;
 
 namespace MoviesInfo.Views
 {
@@ -14,23 +15,36 @@ namespace MoviesInfo.Views
 	public partial class MovieDetail : ContentPage
 	{
         readonly MoviesDetailsManager managerMoviesDetail = new MoviesDetailsManager();
+        #region Services
+        private ApiService apiService;
+        #endregion
+
 
 		public MovieDetail (string id)
 		{
 			InitializeComponent ();
+            this.apiService = new ApiService();
 			LoadDetails(id);
 		}
 
 
 		public async void LoadDetails(string id)
 		{
+
+            var connection = await this.apiService.CheckConnection();
+
+            if (!connection.IsSuccess)
+            {
+                await Application.Current.MainPage.DisplayAlert("Conexão de Rede", connection.Message, "OK");
+                return;
+            }
+
               var detailsMovie = await managerMoviesDetail.GetAllDetail(id);
    
                 Title.Text = detailsMovie.title;
                 Release.Text = detailsMovie.release_date;
                 OverviewTitle.Text = detailsMovie.overview;
                 ImgBig.Source = "https://image.tmdb.org/t/p/w500"+detailsMovie.poster_path;
-
 		}
 
         
