@@ -29,24 +29,19 @@ namespace MoviesInfo.Views
         {
             people = new ObservableCollection<Lista>(await App.PersonRepository.GetAllPeopleAsync());
            //peopleList.ItemsSource = people;
+			var name = App.PersonRepository.GetAllPeopleAsync();
+            
         }
 
         public async void OnDelete(object sender, EventArgs e)
         {
-             //Button item = (Button)sender;
-             
+             //Button item = (Button)sender;             
              Button button1 = (Button)sender;
              Button _ofertaButton1 = button1.Parent.FindByName<Button>("btnDelete");
              //Lista person = (Lista)item.BindingContext;
              var a = _ofertaButton1.CommandParameter;
              //await DeletePersonAsync(person);
-               if (await this.DisplayAlert("Confirmar", "Excluir da Lista? " + a, "Sim", "Não") == true)
-                {
-                    
-                   
-                }
-            
-
+             if (await this.DisplayAlert("Confirmar", "Excluir da Lista? " + a, "Sim", "Não") == true) {}          
         }
 
         public async Task<bool> DeletePersonAsync(Lista person)
@@ -87,6 +82,11 @@ namespace MoviesInfo.Views
             Button button1 = (Button)sender;
             Button _ofertaButton1 = button1.Parent.FindByName<Button>("btnCadastro");
             var a = _ofertaButton1.CommandParameter;
+
+
+
+
+
 
             if (await this.DisplayAlert("Confirmar", "Cadastrar  " + a + "?", "Sim", "Não") == true)
             {

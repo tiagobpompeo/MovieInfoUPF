@@ -1,8 +1,5 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-              BackgroundColor="{StaticResource MenuBackgroundColor}"
-             x:Class="MoviesInfo.Views.Cadastro">
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" BackgroundColor="{StaticResource MenuBackgroundColor}" x:Class="MoviesInfo.Views.Cadastro">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
@@ -18,17 +15,11 @@
                             <ColumnDefinition Width="Auto" />
                             <ColumnDefinition Width="Auto" />
                         </Grid.ColumnDefinitions>
-                        <Image HorizontalOptions="Center"
-                               Source="profile3.png"
-                               VerticalOptions="Center"
-                               Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="2"
-                               x:Name="dataFotoPerfil" Aspect="AspectFill"
-                               HeightRequest="100"
+                        <Image HorizontalOptions="Center" Source="profile3.png" VerticalOptions="Center" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="2" x:Name="dataFotoPerfil" Aspect="AspectFill" HeightRequest="100"
                             WidthRequest="100">
                         </Image>
                         <Label x:Name="txtNom" FontSize="30" Grid.Row="0" Grid.Column="1" TextColor="White" HorizontalTextAlignment="Start" Grid.ColumnSpan="2" />
-                      
-                       </Grid>
+                    </Grid>
                 </Grid>
                 <StackLayout Padding="20,10,20,10" Spacing="12">
                     <ActivityIndicator HeightRequest="40" WidthRequest="40" x:Name="actInd" IsVisible="false" IsRunning="false" Color="#008cdc" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
@@ -42,7 +33,6 @@
                     <Label FontSize="14" TextColor="WhiteSmoke" Text="Telefone">
                     </Label>
                     <Entry HeightRequest="45" x:Name="txtCelular" FontSize="16" Keyboard="Numeric">
-                        
                     </Entry>
                     <Label FontSize="14" TextColor="WhiteSmoke" Text="Gênero">
                     </Label>
@@ -53,7 +43,7 @@
                             <x:String>Feminino</x:String>
                         </Picker.Items>
                     </Picker>
-                    <Label Text="Nacionalidade" TextColor="WhiteSmoke" FontSize="14"/>
+                    <Label Text="Nacionalidade" TextColor="WhiteSmoke" FontSize="14" />
                     <Picker BackgroundColor="White" HeightRequest="40" HorizontalOptions="FillAndExpand" x:Name="nacionalidadePicker">
                         <Picker.Items>
                             <x:String>Escolha a Nacionalidade</x:String>
@@ -70,12 +60,11 @@
                     </Label>
                     <Entry x:Name="Bairro" HeightRequest="40" FontSize="16" TextColor="Black" Keyboard="Text" />
                     <StackLayout Spacing="12" Padding="20,10,20,10">
-                        <Button x:Name="btnCadastro" CornerRadius="2" BackgroundColor="#008cdc" Clicked="Cadastrar" CommandParameter="Tiago" TextColor="White" Text="Cadastrar"  />
+                        <Button x:Name="btnCadastro" CornerRadius="2" BackgroundColor="#008cdc" Clicked="Cadastrar" CommandParameter="Tiago" TextColor="White" Text="Cadastrar" />
                         <Button x:Name="btnDelete" BorderRadius="3" BackgroundColor="Red" TextColor="White" CommandParameter="Tiago" Clicked="OnDelete" Text="Excluir Cadastro" />
                     </StackLayout>
                 </StackLayout>
             </StackLayout>
-
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

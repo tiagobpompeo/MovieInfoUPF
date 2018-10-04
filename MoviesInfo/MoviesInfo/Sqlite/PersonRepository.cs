@@ -11,7 +11,6 @@ namespace MoviesInfo.Sqlite
     public class PersonRepository
     {
         private readonly SQLiteAsyncConnection conn;
-
         public string StatusMessage { get; set; }
 
         public PersonRepository(string dbPath)
@@ -24,11 +23,8 @@ namespace MoviesInfo.Sqlite
         {
             try
             {
-                //basic validation to ensure a name was entered
                 if (string.IsNullOrEmpty(name))
-                    throw new Exception("Digite um nome valido");
-
-                //insert a new person into the Person table
+                    throw new Exception("Digite um nome valido");                
                 var result = await conn.InsertAsync(new Lista { Name = name });
                 //StatusMessage = string.Format("{0} Adicionado o  [Name: {1}]", result, name);
             }
@@ -39,20 +35,15 @@ namespace MoviesInfo.Sqlite
         }
 
         public Task<List<Lista>> GetAllPeopleAsync()
-        {
-            //return a list of people saved to the Person table in the database
+        {   //return a list of people saved to the Person table in the database
             return conn.Table<Lista>().ToListAsync();
         }
-
-
-
 
         public async Task NewPersonAsync()
         {
             try
-            {                //await conn.QueryAsync<Lista>("DROP TABLE lista");
+            {   //await conn.QueryAsync<Lista>("DROP TABLE lista");
                 await conn.QueryAsync<Lista>("DELETE FROM lista");
-
             }
             catch (Exception ex)
             {
@@ -60,9 +51,6 @@ namespace MoviesInfo.Sqlite
             }
         }
          
-
-
-
         public async Task RemovePersonAsync(int id)
         {
             try
