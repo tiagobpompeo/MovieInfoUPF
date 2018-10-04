@@ -2,16 +2,22 @@
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using MoviesInfo.Sqlite;
+using MoviesInfo.Models;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace MoviesInfo
 {
     public partial class App : Application
     {
-        public App()
+
+        public static PersonRepository PersonRepository { get; private set; }
+
+
+        public App(string dbPath)
         {
             InitializeComponent();
-
+            PersonRepository = new PersonRepository(dbPath);
             MainPage = new SplashScreen();
         }
 

@@ -24,9 +24,7 @@ namespace MoviesInfo.Data
         }
 
         public async Task<MoviesNewClass> GetAll(int page)
-        {
-
-            
+        {            
             this.page = page.ToString();
             HttpClient client = GetClient();
             var uri = new Uri(string.Format(Url + this.page.ToString(), string.Empty));
@@ -39,7 +37,5 @@ namespace MoviesInfo.Data
 
             return JsonConvert.DeserializeObject<MoviesNewClass>(content);
         }
-
-
     }
 }

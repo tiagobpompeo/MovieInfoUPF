@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
               BackgroundColor="{StaticResource MenuBackgroundColor}"
@@ -70,8 +70,8 @@
                     </Label>
                     <Entry x:Name="Bairro" HeightRequest="40" FontSize="16" TextColor="Black" Keyboard="Text" />
                     <StackLayout Spacing="12" Padding="20,10,20,10">
-                        <Button CornerRadius="2" BackgroundColor="#008cdc" TextColor="White" Text="Atualizar"  />
-                        <Button BorderRadius="3" BackgroundColor="Red" TextColor="White" Text="Excluir Cadastro" />
+                        <Button x:Name="btnCadastro" CornerRadius="2" BackgroundColor="#008cdc" Clicked="Cadastrar" CommandParameter="Tiago" TextColor="White" Text="Cadastrar"  />
+                        <Button x:Name="btnDelete" BorderRadius="3" BackgroundColor="Red" TextColor="White" CommandParameter="Tiago" Clicked="OnDelete" Text="Excluir Cadastro" />
                     </StackLayout>
                 </StackLayout>
             </StackLayout>

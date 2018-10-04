@@ -7,6 +7,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using FFImageLoading.Forms.Droid;
+using MoviesInfo.Droid.Helpers;
 
 namespace MoviesInfo.Droid
 {
@@ -18,9 +19,10 @@ namespace MoviesInfo.Droid
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init(true);
+            string dbPath = FileAccessHelper.GetLocalFilePath("lista.db3");//banco da lista de compras
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            LoadApplication(new App());
+            LoadApplication(new App(dbPath));
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Android.Content.PM.Permission[] grantResults)

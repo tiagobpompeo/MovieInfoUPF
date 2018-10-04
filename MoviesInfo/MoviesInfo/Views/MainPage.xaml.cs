@@ -36,12 +36,17 @@ namespace MoviesInfo.Views
             BindingContext = ListMovies;             
         }
 
+        void Handle_Refreshing(object sender, System.EventArgs e)
+        {
+           ReturnData();
+        }
 
         private async void ReturnData()
         {
+            listView.IsRefreshing = true;
             var connection = await this.apiService.CheckConnection();
-
-            if (!connection.IsSuccess)
+            
+			if (!connection.IsSuccess)
             {
                 await Application.Current.MainPage.DisplayAlert("Conexão de Rede", connection.Message, "OK");
                 return;
@@ -54,7 +59,6 @@ namespace MoviesInfo.Views
                 foreach (Models.MoviesNewClass.Resultado outView in moviesCollection.Results)
                 {
                    var genreIds = outView.Genre_ids;//list id genres of movie in upcoming compare to another list                   
-
                     ListMovies.Add(new Models.MoviesNewClass.Resultado
                     {
                         Id = outView.Id,
@@ -63,10 +67,10 @@ namespace MoviesInfo.Views
                         Release_date = outView.Release_date,
                         //GenresOut = genreOut
                     });
-
                 }
             }
 
+           listView.IsRefreshing = false;
         }
 
         async void OnItemTapped(object sender, ItemTappedEventArgs e)

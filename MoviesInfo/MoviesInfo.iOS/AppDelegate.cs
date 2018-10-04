@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using MoviesInfo.iOS.Helpers;
 using UIKit;
 
 namespace MoviesInfo.iOS
@@ -24,8 +25,8 @@ namespace MoviesInfo.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
-            LoadApplication(new App());
-
+            string dbPath = FileAccessHelper.GetLocalFilePath("lista.db3");
+            LoadApplication(new App(dbPath));
             return base.FinishedLaunching(app, options);
         }
     }

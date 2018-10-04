@@ -59,7 +59,7 @@ namespace MoviesInfo.Services
                 return new Response
                 {
                     IsSuccess = false,
-                    Message = "Para verificar sua localização em relação aos mercados, ative sua localização",
+                    Message = "Para verificar sua localização, ative sua localização",
                 };
             }
                        
