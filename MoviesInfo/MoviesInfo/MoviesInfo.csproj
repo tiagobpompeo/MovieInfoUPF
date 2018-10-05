@@ -80,6 +80,7 @@
     <Folder Include="Services\Movies\" />
     <Folder Include="Sqlite\" />
     <Folder Include="Views\Templates\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Models\Movies.cs" />

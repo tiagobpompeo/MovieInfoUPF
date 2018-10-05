@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" BackgroundColor="{StaticResource MenuBackgroundColor}" x:Class="MoviesInfo.Views.Cadastro">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" BackgroundColor="{StaticResource MenuBackgroundColor}"
+             xmlns:helper="clr-namespace:MoviesInfo.Helpers"
+             x:Class="MoviesInfo.Views.Cadastro">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
@@ -29,13 +31,15 @@
                     <Label FontSize="14" TextColor="WhiteSmoke" Text="Data Nascimento">
                     </Label>
                     <Entry HeightRequest="40" x:Name="txtDataNasc" FontSize="16" TextColor="Black" Keyboard="Numeric">
+                        <Entry.Behaviors>
+                            <helper:EntryDateFormatterBehavior/>
+                        </Entry.Behaviors>
                     </Entry>
                     <Label FontSize="14" TextColor="WhiteSmoke" Text="Telefone">
                     </Label>
                     <Entry HeightRequest="45" x:Name="txtCelular" FontSize="16" Keyboard="Numeric">
                     </Entry>
-                    <Label FontSize="14" TextColor="WhiteSmoke" Text="Gênero">
-                    </Label>
+                    <Label FontSize="14" TextColor="WhiteSmoke" Text="Gênero"/>
                     <Picker BackgroundColor="White" x:Name="generoPicker">
                         <Picker.Items>
                             <x:String>Escolha o Gênero</x:String>
@@ -50,12 +54,22 @@
                             <x:String>Brasileira</x:String>
                         </Picker.Items>
                     </Picker>
-                    <Label x:Name="Estado" Text="Estado" TextColor="WhiteSmoke" FontSize="14">
-                    </Label>
-                    <Picker BackgroundColor="White" HeightRequest="40" HorizontalOptions="FillAndExpand" x:Name="Estados" />
-                    <Label Text="Cidade" TextColor="WhiteSmoke" FontSize="14">
-                    </Label>
-                    <Picker BackgroundColor="White" HeightRequest="40" HorizontalOptions="FillAndExpand" x:Name="Cidades" />
+                    <Label x:Name="Estado" Text="Estado" TextColor="WhiteSmoke" FontSize="14"/>
+                    <Picker BackgroundColor="White" HeightRequest="40" HorizontalOptions="FillAndExpand" x:Name="Estados">
+                        <Picker.Items>
+                            <x:String>Escolha o Estado</x:String>
+                            <x:String>Santa Catarina</x:String>
+                            <x:String>Rio Grande de Sul</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    <Label Text="Cidade" TextColor="WhiteSmoke" FontSize="14"/>
+                    <Picker BackgroundColor="White" HeightRequest="40" HorizontalOptions="FillAndExpand" x:Name="Cidades">
+                        <Picker.Items>
+                            <x:String>Escolha o Cidade</x:String>
+                            <x:String>Erechim</x:String>
+                            <x:String>Passo Fundo</x:String>
+                        </Picker.Items>
+                    </Picker>
                     <Label Text="Bairro" TextColor="WhiteSmoke" FontSize="14">
                     </Label>
                     <Entry x:Name="Bairro" HeightRequest="40" FontSize="16" TextColor="Black" Keyboard="Text" />
