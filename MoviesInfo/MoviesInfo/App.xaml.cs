@@ -4,6 +4,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using MoviesInfo.Sqlite;
 using MoviesInfo.Models;
+using MoviesInfo.LottieAnimation;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace MoviesInfo
@@ -19,6 +20,7 @@ namespace MoviesInfo
             InitializeComponent();
             PersonRepository = new PersonRepository(dbPath);
             MainPage = new SplashScreen();
+            //MainPage = new AnimacaoLottie();
         }
 
         protected override void OnStart()

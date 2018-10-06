@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms" 
+             x:Class="MoviesInfo.LottieAnimation.AnimacaoLottie">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.Platforms>
+                <On Platform="iOS" Value="0, 60, 0, 0" />
+                <On Platform="Android" Value="0, 10, 0, 0" />
+                <On Platform="UWP" Value="0, 0, 0, 0" />
+            </OnPlatform.Platforms>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label HorizontalTextAlignment="Center" Text="Olá Pessoal do Curso Xamarin na UPF!"/>
+            <forms:AnimationView 
+	        x:Name="animationView" 
+	        Grid.Row="1"
+	        Animation="green_monster.json" 
+	        Loop="false" 
+	        AutoPlay="true"
+	        OnFinish="Handle_OnFinish"
+	        VerticalOptions="FillAndExpand" 
+	        HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

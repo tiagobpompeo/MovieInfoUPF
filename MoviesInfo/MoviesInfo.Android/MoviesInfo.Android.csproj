@@ -50,6 +50,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie">
+      <Version>2.6.3</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.FFImageLoading.Forms">
       <Version>2.4.3.840</Version>
     </PackageReference>
@@ -82,6 +85,7 @@
     <Compile Include="CustomRenderers\SuperEntryRenderer.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="DependencyServices\AudioPlayerService.cs" />
+    <Compile Include="SplashActivity.cs" />
     <Content Include="Resources\drawable\RoundedEntry.xml" />
     <Content Include="Resources\drawable\Shadow.xml">
       <SubType>Designer</SubType>
@@ -90,8 +94,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="NoScrollAndroid.cs" />
     <Compile Include="Helpers\FileAccessHelper.cs" />
+    <AndroidResource Include="Resources\drawable\splash_screen.xml" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\LottieLogo1.json" />
+    <AndroidAsset Include="Assets\green_monster.json" />
+    <AndroidAsset Include="Assets\judgement.json" />
+    <AndroidAsset Include="Assets\loader_nos_inputs_%28sucesso%29.json" />
+    <AndroidAsset Include="Assets\location_map_pin.json" />
+    <AndroidAsset Include="Assets\mobile_app.json" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
@@ -119,7 +130,6 @@
     <Folder Include="Resources\drawable-xhdpi\" />
     <Folder Include="Resources\drawable-xxhdpi\" />
     <Folder Include="Resources\drawable-xxxhdpi\" />
-    <Folder Include="Helpers\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MoviesInfo\MoviesInfo.csproj">

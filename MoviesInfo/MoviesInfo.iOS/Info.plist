@@ -28,7 +28,7 @@
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
+	<string>(not set)</string>
 	<key>CFBundleName</key>
 	<string>MoviesInfo</string>
 	<key>XSAppIconAssets</key>
