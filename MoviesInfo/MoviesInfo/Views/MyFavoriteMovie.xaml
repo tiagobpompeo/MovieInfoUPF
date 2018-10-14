@@ -1,19 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
-             xmlns:templates="clr-namespace:MoviesInfo.Views.Templates"
-             Title="My Movie"
-             x:Class="MoviesInfo.Views.MyFavoriteMovie">
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" xmlns:templates="clr-namespace:MoviesInfo.Views.Templates" Title="My Movie" x:Class="MoviesInfo.Views.MyFavoriteMovie">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Spacing="10" Padding="0,0,0,0">
-                <ffimageloading:CachedImage x:Name="ImgBig"
-                                            Aspect="Fill"
-                                            HorizontalOptions="CenterAndExpand" 
-                                            VerticalOptions="FillAndExpand"
-                                            Source="predator.jpg"
-                                            HeightRequest="250">
+                <ffimageloading:CachedImage x:Name="ImgBig" Aspect="Fill" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" Source="predator.jpg" HeightRequest="250">
                 </ffimageloading:CachedImage>
                 <Grid BackgroundColor="White" RowSpacing="5" Padding="10,5,10,20">
                     <Grid.RowDefinitions>
@@ -33,29 +23,15 @@
                     <Label Grid.Row="2" x:Name="Release" Text="Release: 29/09/2018" Grid.Column="0" FontSize="Small" TextColor="Gray" HorizontalOptions="Start" FontAttributes="Bold" />
                     <BoxView Grid.Row="3" Grid.Column="0" WidthRequest="1" HeightRequest="1" Color="Black" />
                     <Label Grid.Row="4" x:Name="OverviewTitle" Text="Overview" Grid.Column="0" FontSize="Large" TextColor="Black" HorizontalOptions="Start" FontAttributes="Bold" />
-                    <Label Grid.Row="5" x:Name="OverView" 
-                           HorizontalTextAlignment="Start" 
-                           Text="The Predator é um filme de ficção científica estadunidense de 2018, dirigido por Shane Black e escrito por Black e Fred Dekker. É o quarto filme da série Predador. Black teve um papel coadjuvante no filme original, enquanto John Davis retorna como produtor das três primeiras partes."
-                           Grid.Column="0"
-                           FontSize="Small"
-                           Grid.ColumnSpan="2" 
-                           VerticalOptions="FillAndExpand" 
-                           HorizontalOptions="StartAndExpand" />
-                    <StackLayout Padding="0,20,0,10" HorizontalOptions="Center" Grid.Row="6" Grid.Column="0" >
-                        <Button  Grid.Row="6" 
-                             Grid.Column="0" 
-                             Text="Play Audio" 
-                             HorizontalOptions="Center"
-                             Clicked="PlayMyAudio"
-                             BackgroundColor="Teal" 
-                             HeightRequest="40" 
-                             WidthRequest="130" />
-                      
+                    <Label Grid.Row="5" x:Name="OverView" HorizontalTextAlignment="Start" Text="The Predator é um filme de ficção científica estadunidense de 2018, dirigido por Shane Black e escrito por Black e Fred Dekker. É o quarto filme da série Predador. Black teve um papel coadjuvante no filme original, enquanto John Davis retorna como produtor das três primeiras partes." Grid.Column="0" FontSize="Small" Grid.ColumnSpan="2" VerticalOptions="FillAndExpand" HorizontalOptions="StartAndExpand" />
+                    <StackLayout Padding="0,20,0,10" HorizontalOptions="Center" Grid.Row="6" Grid.Column="0">
+                        <Button Grid.Row="6" Grid.Column="0" Text="Play Audio" HorizontalOptions="Center" Clicked="PlayMyAudio" BackgroundColor="Teal" HeightRequest="40" WidthRequest="130">
+                            <Button.TextColor>
+                                <OnPlatform x:TypeArguments="Color" iOS="Black" Android="Black"/>
+                            </Button.TextColor>
+                        </Button>
                     </StackLayout>
-                   
                 </Grid>
-              
-
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

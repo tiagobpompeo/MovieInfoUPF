@@ -7,7 +7,6 @@ using MoviesInfo.Model;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using MoviesInfo.Sqlite;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using MoviesInfo.Models;
 
@@ -23,7 +22,23 @@ namespace MoviesInfo.Views
         {
             InitializeComponent();
             ListPopular();
+            txtNome.TextChanged+=TxtNome_TextChanged;
+            txtNome.Completed += Entry_Completed;
         }
+
+        //Evento que é gerado quando o texto neste elemento de entrada é alterado.
+        void TxtNome_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var oldText = e.OldTextValue;
+            var newText = e.NewTextValue;
+        }
+
+        //Ocorre quando o usuário finaliza o texto em uma entrada com a chave de retorno.
+        void Entry_Completed(object sender, EventArgs e)
+        {
+            var text = ((Entry)sender).Text; //cast sender to access the properties of the Entry
+        }
+
 
         private async void ListPopular()
         {
@@ -79,14 +94,24 @@ namespace MoviesInfo.Views
 
         public async void Cadastrar(object sender, EventArgs args)
         {
+            var nome = txtNome.Text;
+            var data_nasc = txtDataNasc.Text;
+            var celular = txtCelular.Text;
+            var genero = generoPicker.SelectedIndex;
+
+            if(genero==0)
+            {
+
+            }
+            else
+            {
+
+            }
+
+
             Button button1 = (Button)sender;
             Button _ofertaButton1 = button1.Parent.FindByName<Button>("btnCadastro");
             var a = _ofertaButton1.CommandParameter;
-
-
-
-
-
 
             if (await this.DisplayAlert("Confirmar", "Cadastrar  " + a + "?", "Sim", "Não") == true)
             {

@@ -29,11 +29,8 @@ namespace MoviesInfo.Views
         public Menu()
         {
             InitializeComponent();
-
 			Loadmenu();
-
-            BindingContext = _menuItems;           
-            
+            BindingContext = _menuItems;          
         }
 
         public void Loadmenu()
@@ -77,12 +74,13 @@ namespace MoviesInfo.Views
             
 		}
 
-         async void OnItemTapped(object sender, ItemTappedEventArgs e)
+        async void OnItemTapped(object sender, ItemTappedEventArgs e)
         {
             if (e == null) return; // has been set to null, do not 'process' tapped event
             Debug.WriteLine("Tapped: " + e.Item);         
 		    var itemClicado =  e.Item as ItemsMenu;
 			int caseSwitchId = itemClicado.Id;
+
             switch (caseSwitchId)
             {
                     case 0:  
@@ -113,36 +111,6 @@ namespace MoviesInfo.Views
                     break;
             }
 
-        }
-
-        public async void IrMainPage(object obj, EventArgs args)
-        {
-            
-        }
-
-        public async void IrLayouts(object obj, EventArgs args)
-        {
-            
-        }
-
-        public async void IrFavorito(object obj, EventArgs args)
-        {
-           
-        }
-
-        public async void IrPaginaCodigo(object obj, EventArgs args)
-        {
-            
-        }
-
-        public async void IrPaginaXaml(object obj, EventArgs args)
-        {
-            
-        }
-
-        public async void IrCadastro(object obj, EventArgs args)
-        {
-           
-        }
+        }       
     }
 }
