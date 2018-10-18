@@ -32,7 +32,5 @@ namespace MoviesInfo.Models
 
         [MaxLength(250), Unique]
         public string Neighborhood { get; set; }
-
-        
     }
 }

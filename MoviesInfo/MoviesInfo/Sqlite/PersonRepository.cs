@@ -19,18 +19,45 @@ namespace MoviesInfo.Sqlite
             conn.CreateTableAsync<Lista>().Wait();
         }
 
-        public async Task AddNewPersonAsync(string name)
+        //var nome = txtNome.Text;
+        //var data_nasc = txtDataNasc.Text;
+        //var celular = txtCelular.Text;
+        //var genero = generoPicker.SelectedIndex;
+        //var nacionalidade = nacionalidadePicker.SelectedIndex;
+        //var estados = Estados.SelectedIndex;
+        //var cidade = Cidades.SelectedIndex;
+        //var bairrro = Bairro.Text;
+
+
+        public async Task AddNewPersonAsync(string nome, 
+                                            string data_nasc, 
+                                            string celular, 
+                                            string genero, 
+                                            string nacionalidade, 
+                                            string estado, 
+                                            string cidade,
+                                            string bairro)
         {
             try
             {
-                if (string.IsNullOrEmpty(name))
-                    throw new Exception("Digite um nome valido");                
-                var result = await conn.InsertAsync(new Lista { Name = name });
-                //StatusMessage = string.Format("{0} Adicionado o  [Name: {1}]", result, name);
+                if (string.IsNullOrEmpty(nome))
+                    throw new Exception("Digite um nome valido");
+                var result = await conn.InsertAsync(new Lista
+                { 
+                    Name = nome,
+                    DataBirth = data_nasc,
+                    Telephone = celular,
+                    Genre = genero,
+                    Nationality = nacionalidade,
+                    States = estado,
+                    City = cidade,
+                    Neighborhood = bairro
+                });
+                StatusMessage = string.Format("{0} Adicionado o  [Name: {1}]", result, nome);
             }
             catch (Exception ex)
             {
-                //StatusMessage = string.Format("Ja foi adicionado{0}. : {1}", name, ex.Message);
+                StatusMessage = string.Format("Ja foi adicionado{0}. : {1}", nome, ex.Message);
             }
         }
 
@@ -50,7 +77,7 @@ namespace MoviesInfo.Sqlite
                 StatusMessage = string.Format("Conteudo da Lista nao Deletada:", "", ex.Message);
             }
         }
-         
+
         public async Task RemovePersonAsync(int id)
         {
             try
