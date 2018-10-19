@@ -95,6 +95,7 @@
     <Compile Include="NoScrollAndroid.cs" />
     <Compile Include="Helpers\FileAccessHelper.cs" />
     <AndroidResource Include="Resources\drawable\splash_screen.xml" />
+    <AndroidResource Include="Resources\drawable\profile.jpg" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\LottieLogo1.json" />

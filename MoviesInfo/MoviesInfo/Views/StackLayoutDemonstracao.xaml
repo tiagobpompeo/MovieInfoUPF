@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" BackgroundImage="profile.jpg" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MoviesInfo.Views.StackLayoutDemonstracao">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="0" Padding="0,20,0,0">
+                <Button BorderRadius="30" HeightRequest="60" WidthRequest="60" BackgroundColor="Red" HorizontalOptions="Center" VerticalOptions="Start" />
+                <StackLayout HeightRequest="100" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="20">
+                    <Label Text="Tiago Pompeo" FontSize="28" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" FontAttributes="Bold" />
+                    <Label Text="Bacharel em Ciencia da Computacao e Mobile Developer" TextColor="White" BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HeightRequest="50" Padding="5">
+                    <StackLayout Spacing="10" Orientation="Horizontal" HorizontalOptions="Start">
+                        <BoxView BackgroundColor="Teal" WidthRequest="40" HeightRequest="40" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+                        <Label FontSize="14" TextColor="White" Text="Dados Pessoais" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+                    </StackLayout>
+                    <StackLayout Spacing="10" Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                        <BoxView BackgroundColor="Maroon" WidthRequest="40" HeightRequest="40" HorizontalOptions="Start" VerticalOptions="Center" />
+                        <Label FontSize="14" TextColor="White" Text="Hobbies" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout Spacing="10" Orientation="Horizontal" HorizontalOptions="Start">
+                        <Label FontSize="14" TextColor="White" Text="Idade:" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+                        <Label FontSize="14" TextColor="White" Text="33" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+                    </StackLayout>
+                    <StackLayout Spacing="10" Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                        <Label FontSize="14" TextColor="White" Text="Musica:" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+                        <Label FontSize="14" TextColor="White" Text="Rock" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

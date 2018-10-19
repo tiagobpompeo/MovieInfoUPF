@@ -2387,26 +2387,26 @@ namespace MoviesInfo.Droid
 			// aapt resource value: 0x7f020054
 			public const int avd_hide_password = 2130837588;
 			
-			// aapt resource value: 0x7f02015a
-			public const int avd_hide_password_1 = 2130837850;
-			
 			// aapt resource value: 0x7f02015b
-			public const int avd_hide_password_2 = 2130837851;
+			public const int avd_hide_password_1 = 2130837851;
 			
 			// aapt resource value: 0x7f02015c
-			public const int avd_hide_password_3 = 2130837852;
+			public const int avd_hide_password_2 = 2130837852;
+			
+			// aapt resource value: 0x7f02015d
+			public const int avd_hide_password_3 = 2130837853;
 			
 			// aapt resource value: 0x7f020055
 			public const int avd_show_password = 2130837589;
 			
-			// aapt resource value: 0x7f02015d
-			public const int avd_show_password_1 = 2130837853;
-			
 			// aapt resource value: 0x7f02015e
-			public const int avd_show_password_2 = 2130837854;
+			public const int avd_show_password_1 = 2130837854;
 			
 			// aapt resource value: 0x7f02015f
-			public const int avd_show_password_3 = 2130837855;
+			public const int avd_show_password_2 = 2130837855;
+			
+			// aapt resource value: 0x7f020160
+			public const int avd_show_password_3 = 2130837856;
 			
 			// aapt resource value: 0x7f020056
 			public const int Banana = 2130837590;
@@ -3116,11 +3116,11 @@ namespace MoviesInfo.Droid
 			// aapt resource value: 0x7f020141
 			public const int notification_icon_background = 2130837825;
 			
-			// aapt resource value: 0x7f020158
-			public const int notification_template_icon_bg = 2130837848;
-			
 			// aapt resource value: 0x7f020159
-			public const int notification_template_icon_low_bg = 2130837849;
+			public const int notification_template_icon_bg = 2130837849;
+			
+			// aapt resource value: 0x7f02015a
+			public const int notification_template_icon_low_bg = 2130837850;
 			
 			// aapt resource value: 0x7f020142
 			public const int notification_tile_bg = 2130837826;
@@ -3147,46 +3147,49 @@ namespace MoviesInfo.Droid
 			public const int predator = 2130837833;
 			
 			// aapt resource value: 0x7f02014a
-			public const int profile1 = 2130837834;
+			public const int profile = 2130837834;
 			
 			// aapt resource value: 0x7f02014b
-			public const int profile2 = 2130837835;
+			public const int profile1 = 2130837835;
 			
 			// aapt resource value: 0x7f02014c
-			public const int profile3 = 2130837836;
+			public const int profile2 = 2130837836;
 			
 			// aapt resource value: 0x7f02014d
-			public const int profile4 = 2130837837;
+			public const int profile3 = 2130837837;
 			
 			// aapt resource value: 0x7f02014e
-			public const int rate = 2130837838;
+			public const int profile4 = 2130837838;
 			
 			// aapt resource value: 0x7f02014f
-			public const int rocky = 2130837839;
+			public const int rate = 2130837839;
 			
 			// aapt resource value: 0x7f020150
-			public const int search = 2130837840;
+			public const int rocky = 2130837840;
 			
 			// aapt resource value: 0x7f020151
-			public const int SeatedMonkey = 2130837841;
+			public const int search = 2130837841;
 			
 			// aapt resource value: 0x7f020152
-			public const int share = 2130837842;
+			public const int SeatedMonkey = 2130837842;
 			
 			// aapt resource value: 0x7f020153
-			public const int splash_logo = 2130837843;
+			public const int share = 2130837843;
 			
 			// aapt resource value: 0x7f020154
-			public const int splash_screen = 2130837844;
+			public const int splash_logo = 2130837844;
 			
 			// aapt resource value: 0x7f020155
-			public const int tooltip_frame_dark = 2130837845;
+			public const int splash_screen = 2130837845;
 			
 			// aapt resource value: 0x7f020156
-			public const int tooltip_frame_light = 2130837846;
+			public const int tooltip_frame_dark = 2130837846;
 			
 			// aapt resource value: 0x7f020157
-			public const int vidabella = 2130837847;
+			public const int tooltip_frame_light = 2130837847;
+			
+			// aapt resource value: 0x7f020158
+			public const int vidabella = 2130837848;
 			
 			static Drawable()
 			{

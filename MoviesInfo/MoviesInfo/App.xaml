@@ -1,7 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<Application xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MoviesInfo.App">
+<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MoviesInfo.App">
     <Application.Resources>
         <!-- COLORS -->
         <Color x:Key="BlackColor">#000000</Color>
@@ -9,5 +7,9 @@
         <Color x:Key="MenuBackgroundColor">#272627</Color>
         <Color x:Key="MenuTextColor">#B9B8B9</Color>
         <Color x:Key="WhiteColor">#FFFFFF</Color>
+        <!-- STYLES -->
+        <Style TargetType="NavigationPage">
+            <Setter Property="BarBackgroundColor" Value="{StaticResource BlackColor}" />
+        </Style>
     </Application.Resources>
 </Application>

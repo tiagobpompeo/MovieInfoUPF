@@ -29,31 +29,31 @@ namespace MoviesInfo.Views
         public Menu()
         {
             InitializeComponent();
-			Loadmenu();
-            BindingContext = _menuItems;          
+            Loadmenu();
+            BindingContext = _menuItems;
         }
 
         public void Loadmenu()
         {
 
-           _menuItems = new ObservableCollection<ItemsMenu>()
+            _menuItems = new ObservableCollection<ItemsMenu>()
             {
                 new ItemsMenu()
-				{
+                {
                     Title = "Main Page",
                     Icon = "download",
                     Id=0
-				},
+                },
                 new ItemsMenu(){
                     Title = "Tipos Layouts",
                     Icon = "download",
                     Id=1
-				},
+                },
                 new ItemsMenu(){
                     Title = "Meu Filme Favorito",
                     Icon = "download",
                     Id=2
-				},
+                },
                  new ItemsMenu(){
                     Title = "Calculadora no Codigo",
                     Icon = "download",
@@ -68,49 +68,58 @@ namespace MoviesInfo.Views
                     Title = "Cadastro",
                     Icon = "download",
                     Id=5
+                },
+
+                new ItemsMenu(){
+                    Title = "StackLayout Demonstracao",
+                    Icon = "download",
+                    Id=6
                 }
             };
-          
-            
-		}
+
+
+        }
 
         async void OnItemTapped(object sender, ItemTappedEventArgs e)
         {
             if (e == null) return; // has been set to null, do not 'process' tapped event
-            Debug.WriteLine("Tapped: " + e.Item);         
-		    var itemClicado =  e.Item as ItemsMenu;
-			int caseSwitchId = itemClicado.Id;
+            Debug.WriteLine("Tapped: " + e.Item);
+            var itemClicado = e.Item as ItemsMenu;
+            int caseSwitchId = itemClicado.Id;
 
             switch (caseSwitchId)
             {
-                    case 0:  
+                case 0:
                     await Navigation.PushModalAsync(new MasterDetail(0));
-                        break;
-                    case 1:
+                    break;
+                case 1:
                     await Navigation.PushModalAsync(new MasterDetail(1));
-                        break;
+                    break;
 
-                    case 2:
+                case 2:
                     await Navigation.PushModalAsync(new MasterDetail(2));
-                        break;
+                    break;
 
-                    case 3: 
+                case 3:
                     await Navigation.PushModalAsync(new MasterDetail(3));
-                        break;
+                    break;
 
-                    case 4:
+                case 4:
                     await Navigation.PushModalAsync(new MasterDetail(4));
-                        break;
+                    break;
 
-                    case 5:
+                case 5:
                     await Navigation.PushModalAsync(new MasterDetail(5));
-                        break;
+                    break;
+                case 6:
+                    await Navigation.PushModalAsync(new MasterDetail(6));
+                    break;
 
-                  default:
+                default:
                     Console.WriteLine("Default case");
                     break;
             }
 
-        }       
+        }
     }
 }

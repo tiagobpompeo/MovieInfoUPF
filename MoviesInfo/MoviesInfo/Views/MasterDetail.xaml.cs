@@ -48,6 +48,11 @@ namespace MoviesInfo.Views
                 Detail = new NavigationPage(new Cadastro());//Page in Xaml
             }
 
+            if (page == 6)
+            {
+                Detail = new NavigationPage(new StackLayoutDemonstracao());//Page in Xaml
+            }
+
         }
     }
 }
