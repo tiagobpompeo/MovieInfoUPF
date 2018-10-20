@@ -108,6 +108,17 @@
     <BundleResource Include="Resources\location_map_pin.json" />
     <BundleResource Include="Resources\LottieLogo1.json" />
     <BundleResource Include="Resources\mobile_app.json" />
+    <BundleResource Include="Resources\CurvedMask.png" />
+    <BundleResource Include="Resources\HeaderBackground.png" />
+    <BundleResource Include="Resources\icon.png" />
+    <BundleResource Include="Resources\icon120x120.png" />
+    <BundleResource Include="Resources\icon180x180.png" />
+    <BundleResource Include="Resources\menu.png" />
+    <BundleResource Include="Resources\profile.jpg" />
+    <BundleResource Include="Resources\ProfilePic.png" />
+    <BundleResource Include="Resources\RoundedEntry.xml" />
+    <BundleResource Include="Resources\Shadow.xml" />
+    <BundleResource Include="Resources\splash_screen.xml" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\Contents.json">

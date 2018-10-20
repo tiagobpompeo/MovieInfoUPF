@@ -69,12 +69,17 @@ namespace MoviesInfo.Views
                     Icon = "download",
                     Id=5
                 },
-
-                new ItemsMenu(){
+                 new ItemsMenu(){
                     Title = "StackLayout Demonstracao",
                     Icon = "download",
                     Id=6
+                },
+                new ItemsMenu(){
+                    Title = "OnPlatform",
+                    Icon = "download",
+                    Id=7
                 }
+
             };
 
 
@@ -114,7 +119,9 @@ namespace MoviesInfo.Views
                 case 6:
                     await Navigation.PushModalAsync(new MasterDetail(6));
                     break;
-
+                case 7:
+                    await Navigation.PushModalAsync(new MasterDetail(7));
+                    break;
                 default:
                     Console.WriteLine("Default case");
                     break;
