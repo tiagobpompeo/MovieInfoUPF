@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MoviesInfo.Views.FFImageTestes">
+    <ContentPage.Content>
+        <ScrollView>  
+       <!-- <StackLayout Padding="20,0">  
+            <Label Text="FFimageLoadingApp" TextColor="AliceBlue" FontSize="40"/>  
+  
+            <Label Text="GIF" TextColor="DodgerBlue" FontSize="40" />  
+  
+            <ff:CachedImage x:Name="Gif" Source="resource://ImageLoading.Cartoon.gif" />  
+              
+              
+  
+            <Label Text="Blurred Image" TextColor="DodgerBlue" FontSize="40"/>  
+            <ff:CachedImage Source="resource://ImageLoading.logesh.JPG">  
+                <ff:CachedImage.Transformations>  
+                    <ffTransformations:BlurredTransformation Radius="200" />  
+                </ff:CachedImage.Transformations>  
+            </ff:CachedImage>  
+              
+              
+            <Label Text="Rounded Transformation" TextColor="DodgerBlue" FontSize="24"/>  
+            <ff:CachedImage Source="resource://ImageLoading.logesh.JPG">  
+                <ff:CachedImage.Transformations>  
+                    <ffTransformations:RoundedTransformation Radius="240" />  
+                </ff:CachedImage.Transformations>  
+            </ff:CachedImage>  
+  
+            <Label Text="Grayscale Transformation" TextColor="DodgerBlue" FontSize="24"/>  
+            <ff:CachedImage Source="resource://ImageLoading.logesh.JPG">  
+                <ff:CachedImage.Transformations>  
+                    <ffTransformations:GrayscaleTransformation />  
+                </ff:CachedImage.Transformations>  
+            </ff:CachedImage>  
+  
+            <Label Text="Circle Transformation" TextColor="DodgerBlue" FontSize="24"/>  
+            <ff:CachedImage Source="resource://ImageLoading.logesh.JPG">  
+                <ff:CachedImage.Transformations>  
+                    <ffTransformations:CircleTransformation />  
+                </ff:CachedImage.Transformations>  
+            </ff:CachedImage>  
+          
+  
+            <Label Text="Rotate Transformation " TextColor="DodgerBlue" FontSize="24"/>  
+            <ff:CachedImage Source="resource://ImageLoading.logesh.JPG">  
+                <ff:CachedImage.Transformations>  
+                    <ffTransformations:RotateTransformation />  
+                </ff:CachedImage.Transformations>  
+            </ff:CachedImage>  
+  
+            <Label Text="Sepia Transformation" TextColor="DodgerBlue" FontSize="24"/>  
+            <ff:CachedImage Source="resource://ImageLoading.logesh.JPG">  
+                <ff:CachedImage.Transformations>  
+                    <ffTransformations:SepiaTransformation />  
+                </ff:CachedImage.Transformations>  
+            </ff:CachedImage>  
+  
+            <Label Text="Tint Transformation" TextColor="DodgerBlue" FontSize="24"/>  
+            <ff:CachedImage Source="resource://ImageLoading.logesh.JPG">  
+                <ff:CachedImage.Transformations>  
+                    <ffTransformations:TintTransformation />  
+                </ff:CachedImage.Transformations>  
+            </ff:CachedImage>  
+  
+            <Label Text="Crop Transformation " TextColor="DodgerBlue" FontSize="24"/>  
+            <ff:CachedImage Source="resource://ImageLoading.logesh.JPG">  
+                <ff:CachedImage.Transformations>  
+                    <ffTransformations:CropTransformation />  
+                </ff:CachedImage.Transformations>  
+            </ff:CachedImage>  
+  
+            <Label Text="Corner Transformation " TextColor="DodgerBlue" FontSize="24"/>  
+            <ff:CachedImage Source="resource://ImageLoading.logesh.JPG">  
+                <ff:CachedImage.Transformations>  
+                    <ffTransformations:CornersTransformation />  
+                </ff:CachedImage.Transformations>  
+            </ff:CachedImage>  
+  
+  
+            <Label Text="ColorSpace Transformation " TextColor="DodgerBlue" FontSize="24"/>  
+            <ff:CachedImage Source="resource://ImageLoading.logesh.JPG">  
+                <ff:CachedImage.Transformations>  
+                    <ffTransformations:ColorSpaceTransformation/>  
+                </ff:CachedImage.Transformations>  
+            </ff:CachedImage>  
+            <Label Text="SVG" TextColor="DodgerBlue" FontSize="40"/>  
+            <ffSvg:SvgCachedImage Source="resource://ImageLoading.logesh.svg"/>  
+       -->
+        <!--</StackLayout>  -->
+    </ScrollView>  
+    </ContentPage.Content>
+</ContentPage>

@@ -1,33 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" BackgroundImage="profile.jpg" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MoviesInfo.Views.StackLayoutDemonstracao">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" x:Class="MoviesInfo.Views.StackLayoutDemonstracao" Title="Demonstracao StackLayout" xmlns:ffTransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations">
+    <!--BackgroundImage="profile.jpg"-->
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout Spacing="0" Padding="0,20,0,0">
-                <Button BorderRadius="30" HeightRequest="60" WidthRequest="60" BackgroundColor="Red" HorizontalOptions="Center" VerticalOptions="Start" />
-                <StackLayout HeightRequest="100" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="20">
-                    <Label Text="Tiago Pompeo" FontSize="28" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" FontAttributes="Bold" />
-                    <Label Text="Bacharel em Ciencia da Computacao e Mobile Developer" TextColor="White" BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" />
+            <StackLayout>
+                <Image Aspect="Fill" Margin="0,-1,0,-1" Source="CurvedMask.png" VerticalOptions="End" />
+                <ffimageloading:CachedImage HeightRequest="100" HorizontalOptions="Center" Source="profile.png" TranslationY="50" VerticalOptions="Start" WidthRequest="100">
+                    <ffimageloading:CachedImage.Transformations>
+                        <ffTransformations:CircleTransformation />
+                    </ffimageloading:CachedImage.Transformations>
+                </ffimageloading:CachedImage>
+                <StackLayout Padding="0,50,0,00" HorizontalOptions="Center">
+                    <Label Style="{StaticResource ProfileNameLabel}" Text="Pompeo" />
+                    <Label Margin="0,-5" Style="{StaticResource ProfileTagLabel}" Text="Coffee Drinker" />
                 </StackLayout>
-                <StackLayout Orientation="Horizontal" HeightRequest="50" Padding="5">
-                    <StackLayout Spacing="10" Orientation="Horizontal" HorizontalOptions="Start">
-                        <BoxView BackgroundColor="Teal" WidthRequest="40" HeightRequest="40" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
-                        <Label FontSize="14" TextColor="White" Text="Dados Pessoais" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+                <StackLayout Padding="15,0,15,0" Spacing="50" Orientation="Horizontal" Margin="0,30">
+                    <StackLayout HorizontalOptions="StartAndExpand">
+                        <Label Style="{StaticResource StatsNumberLabel}" Text="33" />
+                        <Label Style="{StaticResource StatsCaptionLabel}" Text="Likes" />
                     </StackLayout>
-                    <StackLayout Spacing="10" Orientation="Horizontal" HorizontalOptions="EndAndExpand">
-                        <BoxView BackgroundColor="Maroon" WidthRequest="40" HeightRequest="40" HorizontalOptions="Start" VerticalOptions="Center" />
-                        <Label FontSize="14" TextColor="White" Text="Hobbies" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+                    <StackLayout HorizontalOptions="CenterAndExpand">
+                        <Label Style="{StaticResource StatsNumberLabel}" Text="94" />
+                        <Label Style="{StaticResource StatsCaptionLabel}" Text="Following" />
                     </StackLayout>
-                </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <StackLayout Spacing="10" Orientation="Horizontal" HorizontalOptions="Start">
-                        <Label FontSize="14" TextColor="White" Text="Idade:" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
-                        <Label FontSize="14" TextColor="White" Text="33" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
-                    </StackLayout>
-                    <StackLayout Spacing="10" Orientation="Horizontal" HorizontalOptions="EndAndExpand">
-                        <Label FontSize="14" TextColor="White" Text="Musica:" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
-                        <Label FontSize="14" TextColor="White" Text="Rock" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+                    <StackLayout HorizontalOptions="EndAndExpand">
+                        <Label Style="{StaticResource StatsNumberLabel}" Text="957" />
+                        <Label Style="{StaticResource StatsCaptionLabel}" Text="Followers" />
                     </StackLayout>
                 </StackLayout>
+                <Label Margin="20,0" Style="{StaticResource MainBodyLabel}" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada ultricies arcu nec egestas. Nam porta fermentum aliquam. Nullam tincidunt odio purus." />
+                <Button Margin="20" Style="{StaticResource FollowButton}" Text="Seguir" />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

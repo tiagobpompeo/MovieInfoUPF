@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             BackgroundColor="{StaticResource BackgroundColor}"
-             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             Title="Movie Detail" 
-             xmlns:local="clr-namespace:MoviesInfo"
-             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" 
-             xmlns:templates="clr-namespace:MoviesInfo.Views.Templates"
-             x:Class="MoviesInfo.Views.MovieDetail">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" BackgroundColor="{StaticResource BackgroundColor}" xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" Title="Movie Detail" xmlns:local="clr-namespace:MoviesInfo" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" xmlns:templates="clr-namespace:MoviesInfo.Views.Templates" x:Class="MoviesInfo.Views.MovieDetail">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="MovieItemCoverStyle" TargetType="ffimageloading:CachedImage">

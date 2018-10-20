@@ -79,7 +79,8 @@ namespace MoviesInfo.Views
             Debug.WriteLine("Tapped: " + e.Item);
 			var filmetodo = e.Item as Models.MoviesNewClass.Resultado;
             ((ListView)sender).SelectedItem = null; // de-select the row
-			await Navigation.PushAsync(new MovieDetail(filmetodo.Id.ToString()));
+           
+            await Navigation.PushAsync(new MovieDetail(filmetodo.Id.ToString()));
         }
     }
 }

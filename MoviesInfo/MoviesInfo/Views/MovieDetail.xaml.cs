@@ -15,6 +15,7 @@ namespace MoviesInfo.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class MovieDetail : ContentPage
 	{
+       
         readonly MoviesDetailsManager managerMoviesDetail = new MoviesDetailsManager();
         #region Services
         private ApiService apiService;
@@ -41,7 +42,11 @@ namespace MoviesInfo.Views
                 return;
             }
             //var listGenres = await managerMovies.GetAllGenres();
-            var moviesCollection = await managerMovies.GetAll(2);//page 1//create command to continue...
+
+
+
+
+            var moviesCollection = await managerMovies.GetAll(3);//page 1//create command to continue...
 
             if (moviesCollection.Results != null)
             {
@@ -59,7 +64,9 @@ namespace MoviesInfo.Views
                 }
 
                 listaSimilar.ItemsSource = SimilarMovies;
+               
             }
+           
 
 
         }

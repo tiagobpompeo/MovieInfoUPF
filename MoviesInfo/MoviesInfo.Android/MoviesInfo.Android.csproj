@@ -80,6 +80,9 @@
     <PackageReference Include="sqlite-net-pcl">
       <Version>1.5.231</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Transformations">
+      <Version>2.4.3.840</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomRenderers\SuperEntryRenderer.cs" />
@@ -96,6 +99,9 @@
     <Compile Include="Helpers\FileAccessHelper.cs" />
     <AndroidResource Include="Resources\drawable\splash_screen.xml" />
     <AndroidResource Include="Resources\drawable\profile.jpg" />
+    <AndroidResource Include="Resources\drawable\CurvedMask.png" />
+    <AndroidResource Include="Resources\drawable\HeaderBackground.png" />
+    <AndroidResource Include="Resources\drawable\ProfilePic.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\LottieLogo1.json" />
