@@ -119,6 +119,7 @@
     <BundleResource Include="Resources\RoundedEntry.xml" />
     <BundleResource Include="Resources\Shadow.xml" />
     <BundleResource Include="Resources\splash_screen.xml" />
+    <BundleResource Include="Resources\wanderlust.png" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\Contents.json">

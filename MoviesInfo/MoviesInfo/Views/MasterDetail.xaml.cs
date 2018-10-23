@@ -56,6 +56,10 @@ namespace MoviesInfo.Views
             {
                 Detail = new NavigationPage(new OnPlatformSamples());//Page in Xaml
             }
+            if (page == 8)
+            {
+                Detail = new NavigationPage(new GridDemonstracao());//Page in Xaml
+            }
         }
     }
 }
