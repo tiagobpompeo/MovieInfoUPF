@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" BackgroundImage="wanderlust.png" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MoviesInfo.Views.GridDemonstracao">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" BackgroundColor="Black" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MoviesInfo.Views.GridDemonstracao">
     <ContentPage.Content>
-        <Grid Padding="5,5,5,5">
+        <Grid Padding="10,20,10,10">
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
+                <RowDefinition Height="360" />
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <Grid Grid.Row="0">
+            <Grid VerticalOptions="StartAndExpand" Grid.Row="0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="40" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <Image Grid.Row="0" Grid.Column="0" Source="hamburger.png" />
-                <Label Grid.Row="0" Grid.Column="1" Text="Series" />
-                <Label Grid.Row="0" Grid.Column="2" Text="Filmes" />
-                <Label Grid.Row="0" Grid.Column="3" Text="Minha Lista" />
+                <Image Grid.Row="0" Grid.Column="0" HeightRequest="30" WidthRequest="40" Source="icon120x120.png" VerticalOptions="Center" HorizontalOptions="Center" />
+                <Label Grid.Row="0" Grid.Column="1" Text="Series" VerticalOptions="Center" HorizontalOptions="Center" FontSize="14" TextColor="White" />
+                <Label Grid.Row="0" Grid.Column="2" Text="Filmes" VerticalOptions="Center" HorizontalOptions="Center" FontSize="14" TextColor="White" />
+                <Label Grid.Row="0" Grid.Column="3" Text="Minha Lista" VerticalOptions="Center" HorizontalOptions="Center" FontSize="14" TextColor="White" />
             </Grid>
-            <Grid Grid.Row="1">
+            <Grid VerticalOptions="EndAndExpand" Padding="10,0,10,0" Grid.Row="1">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
@@ -34,9 +34,23 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="40" TextColor="White" Text="WANDERLUST" />
+                <Label Grid.Row="1" Grid.Column="0" FontSize="12" Text="Casais" HorizontalOptions="Center" TextColor="White" />
+                <Label Grid.Row="1" Grid.Column="1" FontSize="12" Text="Comedia" HorizontalOptions="Center" TextColor="White" />
+                <Label Grid.Row="1" Grid.Column="2" FontSize="12" Text="Drama" HorizontalOptions="Center" TextColor="White" />
+                <Label Grid.Row="1" Grid.Column="3" FontSize="12" Text="TV" HorizontalOptions="Center" TextColor="White" />
+                <Label Grid.Row="1" Grid.Column="4" FontSize="12" Text="Excentrico" HorizontalOptions="Center" TextColor="White" />
+                
+                <Image Grid.Row="2" Grid.Column="0" HeightRequest="15" WidthRequest="15" Source="share.png" HorizontalOptions="Center" />
+                <Label Grid.Row="3" Grid.Column="0" Text="Minha Lista" TranslationY="-20" FontSize="10" HorizontalOptions="Center" TextColor="White" />
+                
+                <Button Grid.Row="2" Grid.RowSpan="1" Grid.ColumnSpan="3" TranslationY="8" TextColor="Black" Grid.Column="1" BackgroundColor="White" Text="Assistir" WidthRequest="130" 
+                        HeightRequest="40" Image="check.png"
+                    HorizontalOptions="Center" />
+                
+                <Image Grid.Row="2" Grid.Column="4" Source="share.png" HeightRequest="15" WidthRequest="15" HorizontalOptions="Center" />
+                <Label Grid.Row="3" Grid.Column="4" Text="Saiba Mais" TranslationY="-20" FontSize="10" HorizontalOptions="Center" TextColor="White" />
             </Grid>
         </Grid>
     </ContentPage.Content>
