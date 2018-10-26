@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" BackgroundColor="Black" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MoviesInfo.Views.GridDemonstracao">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:controls="clr-namespace:MoviesInfo.Controls;assembly=MoviesInfo" BackgroundColor="Black" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MoviesInfo.Views.GridDemonstracao">
     <ContentPage.Content>
-        <Grid Padding="10,20,10,10">
+        
+        
+         <Grid Grid.Row="1" ColumnSpacing="1" RowSpacing="5" BackgroundColor="#e0e0e0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="70" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Grid.Row="0" Grid.Column="0" HeightRequest="55" BackgroundColor="White" TextColor="#555555" FontSize="18" Font="13" BorderRadius="0" Image="icon_shoe.png" Text="Activity" />
+                <Button Grid.Row="0" Grid.Column="1" HeightRequest="55" BackgroundColor="White" TextColor="#555555" FontSize="18" Font="13" BorderRadius="0" Image="icon_clipboard.png" Text="Workout" />
+                <Button Grid.Row="1" Grid.Column="0" HeightRequest="55" BackgroundColor="White" TextColor="#555555" FontSize="18" Font="13" BorderRadius="0" Image="icon_headphones.png" Text="Music" />
+                <Button Grid.Row="1" Grid.Column="1" HeightRequest="55" BackgroundColor="White" TextColor="#555555" FontSize="18" Font="13" BorderRadius="0" Image="icon_speaker.png" Text="Audio Stats" />
+                <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="70" WidthRequest="250"  HorizontalOptions="CenterAndExpand" VerticalOptions="Center" BackgroundColor="#ffb636" BorderRadius="0" TextColor="#ffffff" Text="Go Running">
+                   
+                </Button>
+            </Grid>
+        <!--      <Grid Padding="10,20,10,10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="360" />
                 <RowDefinition Height="*" />
@@ -48,6 +68,67 @@
                 <Image Grid.Row="2" Grid.Column="4" Source="share.png" HeightRequest="15" WidthRequest="15" HorizontalOptions="Center" />
                 <Label Grid.Row="3" Grid.Column="4" Text="Saiba Mais" TranslationY="-20" FontSize="10" HorizontalOptions="Center" TextColor="White" />
             </Grid>
-        </Grid>
+        </Grid>-->
+        <!--<Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Label Text="Who´s Watching?" Style="{StaticResource WhoTextStyle}" />
+            <Grid Grid.Row="1" Padding="48, 0">
+                <Grid HeightRequest="120" Margin="0, 0, 0, 12">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Image Grid.Row="0" Source="ProfilePic.png" />
+                    <Label Grid.Row="1" Text="Ana Vitoria" Style="{StaticResource ProfileItemTextStyle}" />
+                </Grid>
+            </Grid>
+        </Grid>-->
+       
+           
+            <!-- <ContentView BackgroundColor="Transparent" Grid.Row="1" Margin="5,0,5,0">
+                <Grid ColumnSpacing="1" RowSpacing="1" Margin="5" BackgroundColor="#e0e0e0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Orientation="Horizontal" Grid.Row="0" Grid.Column="0" HeightRequest="70" BackgroundColor="White">
+                        <Image Source="icon_shoe.png" VerticalOptions="Center" Margin="10,0,0,0" />
+                        <StackLayout VerticalOptions="Center">
+                            <Label Text="Activity" TextColor="#888888" FontSize="16" />
+                            <Label Text="Running" TextColor="#555555" FontSize="16" />
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Grid.Row="0" Grid.Column="1" HeightRequest="70" BackgroundColor="White">
+                        <Image Source="icon_clipboard.png" VerticalOptions="Center" Margin="10,0,0,0" />
+                        <StackLayout VerticalOptions="Center">
+                            <Label Text="Workout" TextColor="#888888" FontSize="16" />
+                            <Label Text="None" TextColor="#555555" FontSize="16" />
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Grid.Row="1" Grid.Column="0" HeightRequest="70" BackgroundColor="White">
+                        <Image Source="icon_headphones.png" VerticalOptions="Center" Margin="10,0,0,0" />
+                        <StackLayout VerticalOptions="Center">
+                            <Label Text="Music" TextColor="#888888" FontSize="16" />
+                            <Label Text="Select" TextColor="#555555" FontSize="16" />
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Grid.Row="1" Grid.Column="1" HeightRequest="70" BackgroundColor="White">
+                        <Image Source="icon_speaker.png" VerticalOptions="Center" Margin="10,0,0,0" />
+                        <StackLayout VerticalOptions="Center">
+                            <Label Text="Audio Stats" TextColor="#888888" FontSize="16" />
+                            <Label Text="Time" TextColor="#555555" FontSize="16" />
+                        </StackLayout>
+                    </StackLayout>
+                </Grid>
+            </ContentView>-->
+            <!-- Start button -->
+        
     </ContentPage.Content>
 </ContentPage>

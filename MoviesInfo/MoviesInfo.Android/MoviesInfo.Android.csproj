@@ -106,6 +106,25 @@
     <AndroidResource Include="Resources\drawable\HeaderBackground.png" />
     <AndroidResource Include="Resources\drawable\ProfilePic.png" />
     <AndroidResource Include="Resources\drawable\wanderlust.png" />
+    <AndroidResource Include="Resources\drawable\graph.png" />
+    <AndroidResource Include="Resources\drawable\icon_add.png" />
+    <AndroidResource Include="Resources\drawable\icon_badge1.png" />
+    <AndroidResource Include="Resources\drawable\icon_badge2.png" />
+    <AndroidResource Include="Resources\drawable\icon_badge3.png" />
+    <AndroidResource Include="Resources\drawable\icon_caret.png" />
+    <AndroidResource Include="Resources\drawable\icon_clipboard.png" />
+    <AndroidResource Include="Resources\drawable\icon_comments.png" />
+    <AndroidResource Include="Resources\drawable\icon_graph.png" />
+    <AndroidResource Include="Resources\drawable\icon_headphones.png" />
+    <AndroidResource Include="Resources\drawable\icon_list.png" />
+    <AndroidResource Include="Resources\drawable\icon_settings.png" />
+    <AndroidResource Include="Resources\drawable\icon_shoe.png" />
+    <AndroidResource Include="Resources\drawable\icon_speaker.png" />
+    <AndroidResource Include="Resources\drawable\icon_usersettings.png" />
+    <AndroidResource Include="Resources\drawable\logo.png" />
+    <AndroidResource Include="Resources\drawable\me_photo.jpg" />
+    <AndroidResource Include="Resources\drawable\me.png" />
+    <AndroidResource Include="Resources\drawable\start.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\LottieLogo1.json" />

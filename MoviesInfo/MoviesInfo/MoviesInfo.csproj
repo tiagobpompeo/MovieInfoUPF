@@ -89,6 +89,7 @@
     <Folder Include="Sqlite\" />
     <Folder Include="Views\Templates\" />
     <Folder Include="Helpers\" />
+    <Folder Include="Controls\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Models\Movies.cs" />
