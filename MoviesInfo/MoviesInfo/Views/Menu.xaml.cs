@@ -83,8 +83,12 @@ namespace MoviesInfo.Views
                     Title = "Grid",
                     Icon = "download",
                     Id=8
+                },
+                new ItemsMenu(){
+                    Title = "Movies Page",
+                    Icon = "download",
+                    Id=9
                 }
-
             };
 
 
@@ -129,6 +133,9 @@ namespace MoviesInfo.Views
                     break;
                 case 8:
                     await Navigation.PushModalAsync(new MasterDetail(8));
+                    break;
+                case 9:
+                    await Navigation.PushModalAsync(new MasterDetail(9));
                     break;
                 default:
                     Console.WriteLine("Default case");

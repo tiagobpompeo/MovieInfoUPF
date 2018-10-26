@@ -8,6 +8,7 @@ namespace MoviesInfo.Services.Movies
     public interface IMovie
     {
 
-        Task<Response> GetAllMovies(string urlBase,int page);
+        Task<Response> GetAllMovies(string urlbase,int page);
+      
     }
 }

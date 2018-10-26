@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MoviesInfo" 
+             xmlns:templates="clr-namespace:MoviesInfo.Views.Templates"
+             Title="Movies Page" xmlns:controls="clr-namespace:MoviesInfo.CustomControls"
+             Icon="hamburger.png" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" 
+             BackgroundColor="WhiteSmoke" x:Class="MoviesInfo.Views.MoviesPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.Platforms>
+                <On Platform="iOS" Value="0, 10, 0, 0" />
+                <On Platform="Android" Value="0, 10, 0, 0" />
+                <On Platform="UWP" Value="0, 0, 0, 0" />
+            </OnPlatform.Platforms>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <!--<ScrollView>
+        <StackLayout Padding="20,20,20,20">
+            <ffimageloading:CachedImage HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="rocky.jpg">
+                <ffimageloading:CachedImage.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="FotoTapped" CommandParameter="1" NumberOfTapsRequired="1" />
+                </ffimageloading:CachedImage.GestureRecognizers>
+            </ffimageloading:CachedImage>
+            <BoxView HeightRequest="1" Color="Teal" HorizontalOptions="FillAndExpand" />
+            <ffimageloading:CachedImage HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="pianista.jpg">
+                <ffimageloading:CachedImage.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="FotoTapped" CommandParameter="2" NumberOfTapsRequired="1" />
+                </ffimageloading:CachedImage.GestureRecognizers>
+            </ffimageloading:CachedImage>
+            <BoxView HeightRequest="1" Color="Teal" HorizontalOptions="FillAndExpand" />
+            <ffimageloading:CachedImage HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="vidabella.jpg">
+                <ffimageloading:CachedImage.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="FotoTapped" CommandParameter="3" NumberOfTapsRequired="1" />
+                </ffimageloading:CachedImage.GestureRecognizers>
+            </ffimageloading:CachedImage>
+            <BoxView HeightRequest="1" Color="Teal" HorizontalOptions="FillAndExpand" />
+            <ffimageloading:CachedImage HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="orphan.jpg">
+                <ffimageloading:CachedImage.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="FotoTapped" CommandParameter="4" NumberOfTapsRequired="1" />
+                </ffimageloading:CachedImage.GestureRecognizers>
+            </ffimageloading:CachedImage>
+        </StackLayout>
+    </ScrollView>-->
+        <!--<StackLayout Spacing="2" Padding="0,10,0,10">
+            <RelativeLayout HeightRequest="300">
+                <ListView Rotation="270" RowHeight="300" VerticalOptions="FillAndExpand" CachingStrategy="RecycleElement" ItemTapped="OnItemTapped" ItemsSource="{Binding}" HorizontalOptions="FillAndExpand" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0.5,Constant=-150}" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=-0.5,Constant=150}" RelativeLayout.WidthConstraint="{ConstraintExpression Type=Constant,Constant=300}"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}" x:Name="Lista1">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ContentView Rotation="90" BackgroundColor="Transparent" Padding="0">
+                                    <ffimageloading:CachedImage Grid.Row="0" HeightRequest="300" Aspect="AspectFit" Grid.Column="0" Grid.RowSpan="3" Source="{Binding Poster_path}" />
+                                </ContentView>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                    <ListView.Effects>
+                        <local:NoScroll />
+                    </ListView.Effects>
+                </ListView>
+            </RelativeLayout>
+        </StackLayout>-->
+        <ListView CachingStrategy="RecycleElement"
+                  ItemTapped="OnItemTapped" 
+                  x:Name="listView" 
+                  ItemsSource="{Binding}"
+                  SeparatorColor="Transparent"
+                  HasUnevenRows="True"
+                  IsRefreshing="false"
+                  IsPullToRefreshEnabled="True"
+                  Refreshing="Handle_Refreshing">
+            <ListView.Header>
+                <StackLayout>
+                </StackLayout>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <templates:MovieItem/>
+                        <!--<Frame Margin="5,5,5,5" Padding="0" HasShadow="true" OutlineColor="White">
+                            <Grid RowSpacing="5" Padding="5,5,5,5">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="80" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ffimageloading:CachedImage Grid.Row="0" HeightRequest="105" Aspect="AspectFit" Grid.Column="0" Grid.RowSpan="3" Source="{Binding Poster_path}" />
+                                <Label x:Name="title" Grid.Row="0" Grid.Column="1" Text="{Binding Title,StringFormat='Title : {0:N}'}}" VerticalTextAlignment="End" HorizontalTextAlignment="Start" FontSize="Medium" TextColor="Gray" FontAttributes="Bold" />
+                                <Label x:Name="release" Grid.Row="1" Grid.Column="1" Text="{Binding Release_date,StringFormat='Release Date : {0:N}'}}" VerticalTextAlignment="Start" HorizontalTextAlignment="Start" FontSize="Small" TextColor="Gray" FontAttributes="Bold" />
+                                <Label x:Name="genre" Grid.Row="2" Grid.Column="1" Text="{Binding GenresOut,StringFormat='Genre : {0:N}'}}" VerticalTextAlignment="Start" HorizontalTextAlignment="Start" FontSize="Small" TextColor="Gray" FontAttributes="Bold" />
+                            </Grid>
+                        </Frame>-->
+                        
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.Footer>
+                <Grid HorizontalOptions="Center" VerticalOptions="Center">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="120" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Padding="0,10,0,30">
+                    </StackLayout>
+                </Grid>
+            </ListView.Footer>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

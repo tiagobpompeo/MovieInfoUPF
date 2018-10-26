@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace MoviesInfo.Services
 {
@@ -29,9 +30,14 @@ namespace MoviesInfo.Services
             set;
         }
 
-       
+        public object Resultado
+        {
+            get;
+            set;
+        }
 
-      
+
+
 
         public string Count
         {
@@ -61,6 +67,11 @@ namespace MoviesInfo.Services
         {
             get;
             set;
+        }
+
+        public static explicit operator List<object>(Response v)
+        {
+            throw new NotImplementedException();
         }
     }
 }
