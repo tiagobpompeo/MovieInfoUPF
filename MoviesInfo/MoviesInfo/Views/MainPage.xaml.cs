@@ -4,6 +4,7 @@ using System.Diagnostics;
 using Xamarin.Forms;
 using MoviesInfo.Data;
 using MoviesInfo.Services;
+using MoviesInfo.Helpers;
 
 namespace MoviesInfo.Views
 {
@@ -80,6 +81,9 @@ namespace MoviesInfo.Views
 			var filmetodo = e.Item as Models.MoviesNewClass.Resultado;
             ((ListView)sender).SelectedItem = null; // de-select the row           
             await Navigation.PushAsync(new MovieDetail(filmetodo.Id.ToString()));
+
+            //Xam.Plugins.Settings armazenamento persistente
+            Helpers.Settings.IdFilme = filmetodo.ToString();
         }
     }
 }
