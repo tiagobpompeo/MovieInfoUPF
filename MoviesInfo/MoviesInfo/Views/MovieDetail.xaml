@@ -2,10 +2,10 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" BackgroundColor="{StaticResource BackgroundColor}" xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" Title="Movie Detail" xmlns:local="clr-namespace:MoviesInfo" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" xmlns:templates="clr-namespace:MoviesInfo.Views.Templates" x:Class="MoviesInfo.Views.MovieDetail">
     <ContentPage.Resources>
         <ResourceDictionary>
-            <Style x:Key="MovieItemCoverStyle" TargetType="ffimageloading:CachedImage">
+            <!-- <Style x:Key="MovieItemCoverStyle" TargetType="ffimageloading:CachedImage">
                 <Setter Property="Aspect" Value="AspectFit" />
                 <Setter Property="HeightRequest" Value="160" />
-            </Style>
+            </Style>-->
             <Style x:Key="DetailTitleStyle" TargetType="Label">
                 <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
                 <Setter Property="FontSize" Value="20" />
@@ -121,7 +121,7 @@
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
                             <Label Grid.Column="0" x:Name="Release" Style="{StaticResource DurationTextStyle}" />
-                            <Label Grid.Column="1" Text="02:30:00" HorizontalOptions="Start" Style="{StaticResource DurationTextStyle}" />
+                            <Label Grid.Column="1" x:Name="Data" Text="02:30:00" HorizontalOptions="Start" Style="{StaticResource DurationTextStyle}" />
                         </Grid>
                         <Label Grid.Row="2" x:Name="OverviewTitle" Style="{StaticResource DetailDescriptionStyle}" />
                     </Grid>
@@ -161,7 +161,6 @@
                             <!--  <flv:FlowListView.FlowColumnTemplate>
                                     <DataTemplate>
                                        <templates:MovieItemDetailTemplate />
-                                       
                                     </DataTemplate>
                                 </flv:FlowListView.FlowColumnTemplate>-->
                             <!--  </flv:FlowListView>-->

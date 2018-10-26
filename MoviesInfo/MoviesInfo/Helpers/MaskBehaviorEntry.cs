@@ -58,7 +58,7 @@ namespace MoviesInfo.Helpers
                     }
                     else if (entryText.Length < MaxLength && Formatado)
                     {
-                        //entryText = entryText.RemoveNonNumbers();
+                        entryText = entryText.RemoveNonNumbers();
                         Formatado = false;
                     }
 
@@ -80,7 +80,7 @@ namespace MoviesInfo.Helpers
                     }
                     else if (entryText.Length < MaxLength && Formatado)
                     {
-                        //entryText = entryText.RemoveNonNumbers();
+                        entryText = entryText.RemoveNonNumbers();
                         Formatado = false;
                     }
 
@@ -110,7 +110,7 @@ namespace MoviesInfo.Helpers
                     }
                     else if (entryText.Length < LENGTH_PHONE_SEM_MASCARA_14 && Formatado)
                     {
-                        //entryText = entry.Text.RemoveNonNumbers();
+                        entryText = entry.Text.RemoveNonNumbers();
                         Formatado = false;
                     }
 
@@ -131,7 +131,7 @@ namespace MoviesInfo.Helpers
                     }
                     else if (entryText.Length < MaxLength && Formatado)
                     {
-                        //entryText = entryText.RemoveNonNumbers();
+                        entryText = entryText.RemoveNonNumbers();
                         Formatado = false;
                     }
 
@@ -165,14 +165,14 @@ namespace MoviesInfo.Helpers
 
                     if (entryText != e.OldTextValue)
                     {
-                        //string strNumber = entryText.RemoveNonNumbers();
+                        string strNumber = entryText.RemoveNonNumbers();
 
-                        //if (strNumber.Length > LENGTH_DECIMAL)
-                        //{
-                        //    var pos = strNumber.Length - LENGTH_DECIMAL;
-                        //    entryText = strNumber.Insert(pos, ",");
-                        //    entry.Text = string.Format("{0:N2}", Convert.ToDecimal(entryText));
-                        //}
+                        if (strNumber.Length > LENGTH_DECIMAL)
+                        {
+                            var pos = strNumber.Length - LENGTH_DECIMAL;
+                            entryText = strNumber.Insert(pos, ",");
+                            entry.Text = string.Format("{0:N2}", Convert.ToDecimal(entryText));
+                        }
                     }
 
                     break;

@@ -64,10 +64,6 @@ namespace MoviesInfo.Models
             [JsonProperty(PropertyName = "minimum")]
             public string Minimum { get; set; }
         }
-
-
-
-
     }
 
 }

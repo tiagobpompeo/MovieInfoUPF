@@ -40,7 +40,7 @@
                     <Entry HeightRequest="45" x:Name="txtCelular" FontSize="16" Keyboard="Numeric">
                     </Entry>
                     <Label FontSize="14" TextColor="WhiteSmoke" Text="Gênero"/>
-                    <Picker BackgroundColor="White" x:Name="generoPicker">
+                    <Picker BackgroundColor="White" FontSize="12" x:Name="generoPicker">
                         <Picker.Items>
                             <x:String>Escolha o Gênero</x:String>
                             <x:String>Masculino</x:String>
@@ -48,14 +48,14 @@
                         </Picker.Items>
                     </Picker>
                     <Label Text="Nacionalidade" TextColor="WhiteSmoke" FontSize="14" />
-                    <Picker BackgroundColor="White" HeightRequest="40" HorizontalOptions="FillAndExpand" x:Name="nacionalidadePicker">
+                    <Picker BackgroundColor="White" FontSize="12" HeightRequest="40" HorizontalOptions="FillAndExpand" x:Name="nacionalidadePicker">
                         <Picker.Items>
                             <x:String>Escolha a Nacionalidade</x:String>
                             <x:String>Brasileira</x:String>
                         </Picker.Items>
                     </Picker>
                     <Label x:Name="Estado" Text="Estado" TextColor="WhiteSmoke" FontSize="14"/>
-                    <Picker BackgroundColor="White" HeightRequest="40" HorizontalOptions="FillAndExpand" x:Name="Estados">
+                    <Picker BackgroundColor="White" FontSize="12" HeightRequest="40" HorizontalOptions="FillAndExpand" x:Name="Estados">
                         <Picker.Items>
                             <x:String>Escolha o Estado</x:String>
                             <x:String>Santa Catarina</x:String>
@@ -63,7 +63,7 @@
                         </Picker.Items>
                     </Picker>
                     <Label Text="Cidade" TextColor="WhiteSmoke" FontSize="14"/>
-                    <Picker BackgroundColor="White" HeightRequest="40" HorizontalOptions="FillAndExpand" x:Name="Cidades">
+                    <Picker BackgroundColor="White" FontSize="12" HeightRequest="40" HorizontalOptions="FillAndExpand" x:Name="Cidades">
                         <Picker.Items>
                             <x:String>Escolha o Cidade</x:String>
                             <x:String>Erechim</x:String>

@@ -11,6 +11,7 @@
     </ContentPage.Padding>
     <ContentPage.Resources>
         <ResourceDictionary>
+            <Thickness x:Key="myKey">5,20,5,10</Thickness>
             <Style x:Key="ProfilePictureStyle" TargetType="Image">
                 <Setter Property="Aspect" Value="AspectFit" />
                 <Setter Property="WidthRequest" Value="48" />
@@ -25,7 +26,7 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
-        <Grid>
+        <Grid Padding="{StaticResource myKey}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
@@ -41,7 +42,11 @@
                 <Image Grid.Column="2" />
                 <Grid Grid.Column="0" Grid.ColumnSpan="3" HeightRequest="2" VerticalOptions="End" BackgroundColor="{StaticResource BlackColor}" />
             </Grid>
-            <ListView Grid.Row="1" x:name="listMenu" ItemTapped="OnItemTapped" ItemsSource="{Binding}" BackgroundColor="{StaticResource MenuBackgroundColor}" SeparatorVisibility="None">
+            <ListView Grid.Row="1" x:name="listMenu" 
+                      ItemTapped="OnItemTapped" 
+                      ItemsSource="{Binding}" 
+                      BackgroundColor="{StaticResource MenuBackgroundColor}" 
+                      SeparatorVisibility="None">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

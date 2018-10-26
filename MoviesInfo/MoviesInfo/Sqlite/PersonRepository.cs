@@ -29,21 +29,14 @@ namespace MoviesInfo.Sqlite
         //var bairrro = Bairro.Text;
 
 
-        public async Task AddNewPersonAsync(string nome, 
-                                            string data_nasc, 
-                                            string celular, 
-                                            string genero, 
-                                            string nacionalidade, 
-                                            string estado, 
-                                            string cidade,
-                                            string bairro)
+        public async Task AddNewPersonAsync(string nome,string data_nasc,string celular,string genero,string nacionalidade,string estado,string cidade,string bairro)
         {
             try
             {
                 if (string.IsNullOrEmpty(nome))
                     throw new Exception("Digite um nome valido");
                 var result = await conn.InsertAsync(new Lista
-                { 
+                {
                     Name = nome,
                     DataBirth = data_nasc,
                     Telephone = celular,
@@ -85,7 +78,6 @@ namespace MoviesInfo.Sqlite
                 //basic validation to ensure a name was entered
                 if (string.IsNullOrEmpty(id.ToString()) && string.IsNullOrEmpty(id.ToString()))
                     throw new Exception("Nome Invalido para deletar");
-
                 await conn.QueryAsync<Lista>("DELETE FROM [lista] WHERE [Id] = " + id);
             }
             catch (Exception ex)

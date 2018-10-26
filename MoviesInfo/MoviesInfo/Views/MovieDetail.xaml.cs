@@ -88,9 +88,7 @@ namespace MoviesInfo.Views
                 Release.Text = detailsMovie.release_date;
                 OverviewTitle.Text = detailsMovie.overview;
                 ImgBig.Source = "https://image.tmdb.org/t/p/w500"+detailsMovie.poster_path;
-		}
-
-       
+		}      
 
        
 

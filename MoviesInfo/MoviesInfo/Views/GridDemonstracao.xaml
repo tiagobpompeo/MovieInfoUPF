@@ -41,14 +41,10 @@
                 <Label Grid.Row="1" Grid.Column="2" FontSize="12" Text="Drama" HorizontalOptions="Center" TextColor="White" />
                 <Label Grid.Row="1" Grid.Column="3" FontSize="12" Text="TV" HorizontalOptions="Center" TextColor="White" />
                 <Label Grid.Row="1" Grid.Column="4" FontSize="12" Text="Excentrico" HorizontalOptions="Center" TextColor="White" />
-                
                 <Image Grid.Row="2" Grid.Column="0" HeightRequest="15" WidthRequest="15" Source="share.png" HorizontalOptions="Center" />
                 <Label Grid.Row="3" Grid.Column="0" Text="Minha Lista" TranslationY="-20" FontSize="10" HorizontalOptions="Center" TextColor="White" />
-                
-                <Button Grid.Row="2" Grid.RowSpan="1" Grid.ColumnSpan="3" TranslationY="8" TextColor="Black" Grid.Column="1" BackgroundColor="White" Text="Assistir" WidthRequest="130" 
-                        HeightRequest="40" Image="check.png"
-                    HorizontalOptions="Center" />
-                
+                <Button Grid.Row="2" Grid.RowSpan="1" Grid.ColumnSpan="3" TranslationY="8" TextColor="Black" Grid.Column="1" BackgroundColor="White" Text="Assistir" WidthRequest="130" HeightRequest="40"
+                    Image="check.png" HorizontalOptions="Center" />
                 <Image Grid.Row="2" Grid.Column="4" Source="share.png" HeightRequest="15" WidthRequest="15" HorizontalOptions="Center" />
                 <Label Grid.Row="3" Grid.Column="4" Text="Saiba Mais" TranslationY="-20" FontSize="10" HorizontalOptions="Center" TextColor="White" />
             </Grid>
