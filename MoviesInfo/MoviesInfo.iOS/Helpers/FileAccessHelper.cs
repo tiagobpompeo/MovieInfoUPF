@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MoviesInfo.iOS.Helpers
 {
-    public class FileAccessHelper
+    public static class FileAccessHelper
     {
         public static string GetLocalFilePath(string filename)
         {

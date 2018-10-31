@@ -4,7 +4,7 @@ using SQLite;
 namespace MoviesInfo.Models
 {
     [Table("lista")]
-    public class Lista
+    public class Person
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
