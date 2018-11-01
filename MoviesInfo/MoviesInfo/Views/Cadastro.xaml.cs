@@ -9,6 +9,7 @@ using Xamarin.Forms.Xaml;
 using MoviesInfo.Sqlite;
 using System.Collections.ObjectModel;
 using MoviesInfo.Models;
+using Acr.UserDialogs;
 
 namespace MoviesInfo.Views
 {
@@ -22,7 +23,8 @@ namespace MoviesInfo.Views
         public int _cidade;
         public int _nacionalidade;
         public int _estado;
-
+        public int personId;
+        public string personName;
 
         public Cadastro()
         {
@@ -77,17 +79,18 @@ namespace MoviesInfo.Views
                 _cidade = 2;
             }
 
-            if (await this.DisplayAlert("Confirmar", "Cadastrar ?", "Sim", "Não") == true)
-            {
-                await App.PersonRepository.AddNewPersonAsync(nome,
-                                                             data_nasc,
-                                                             celular, 
-                                                             _genero.ToString(),
-                                                             _nacionalidade.ToString(),
-                                                             _estado.ToString(),
-                                                             _cidade.ToString(),
-                                                             bairro);
-            }
+
+            await App.PersonRepository.AddNewPersonAsync(nome,
+                                                         data_nasc,
+                                                         celular,
+                                                         _genero.ToString(),
+                                                         _nacionalidade.ToString(),
+                                                         _estado.ToString(),
+                                                         _cidade.ToString(),
+                                                         bairro);
+
+            var msg = App.PersonRepository.StatusMessage;
+            UserDialogs.Instance.Toast(msg, TimeSpan.FromMilliseconds(2000));
 
         }
 
@@ -100,6 +103,9 @@ namespace MoviesInfo.Views
             {
                 foreach (var saida in pessoa)
                 {
+
+                    personId = saida.Id;
+                    personName = saida.Name;
                     txtNome.Text = saida.Name;
                     txtDataNasc.Text = saida.DataBirth;
                     txtCelular.Text = saida.Telephone;
@@ -117,30 +123,58 @@ namespace MoviesInfo.Views
 
         public async void OnDelete(object sender, EventArgs e)
         {
-                        
+
             Button button1 = (Button)sender;
             Button _ofertaButton1 = button1.Parent.FindByName<Button>("btnDelete");
-            //Person person = (Person)item.BindingContext;
+
             var a = _ofertaButton1.CommandParameter;
-           
-            if (await this.DisplayAlert("Confirmar", "Excluir da Lista? " + a, "Sim", "Não") == true) 
-            {
-                //await DeletePersonAsync(a);
-            }
+
+
+            await DeletePersonAsync(personId);
+
         }
 
-        public async Task<bool> DeletePersonAsync(Person person)
+        public async Task<bool> DeletePersonAsync(int personId)
         {
-            if (person != null)
+            if (!string.IsNullOrWhiteSpace(personName))
             {
-                if (await this.DisplayAlert("Confirmar", "Excluir da Lista? " + person.Name, "Sim", "Não") == true)
+                if (await this.DisplayAlert("Confirmar", "Excluir da Lista? " + personName, "Sim", "Não") == true)
                 {
-                    await App.PersonRepository.RemovePersonAsync(person.Id);//Name,Sublinhado
-                    ListPopular();
+                    await App.PersonRepository.RemovePersonAsync(personId);//Name,Sublinhado
+                    var msg = App.PersonRepository.StatusMessage;
+                    UserDialogs.Instance.Toast(msg, TimeSpan.FromMilliseconds(2000));
+                    
+                    LimparCampos();
                     return true;
                 }
             }
+
             return false;
         }
+
+        private void LimparCampos()
+        {
+            txtNome.Text = String.Empty;
+            txtDataNasc.Text= String.Empty;
+            txtCelular.Text= String.Empty;
+            generoPicker.SelectedIndex= -1;
+            nacionalidadePicker.SelectedIndex= -1;
+            Estados.SelectedIndex= -1;
+            Cidades.SelectedIndex = -1;
+            Bairro.Text= String.Empty;
+        }
+        //public async Task<bool> DeletePersonAsync(Person person)
+        //{
+        //    if (person != null)
+        //    {
+        //        if (await this.DisplayAlert("Confirmar", "Excluir da Lista? " + person.Name, "Sim", "Não") == true)
+        //        {
+        //            await App.PersonRepository.RemovePersonAsync(person.Id);//Name,Sublinhado
+        //            ListPopular();
+        //            return true;
+        //        }
+        //    }
+        //    return false;
+        //}
     }
 }

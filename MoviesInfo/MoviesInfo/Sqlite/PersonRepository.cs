@@ -5,6 +5,7 @@ using MoviesInfo.Models;
 using SQLite;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using Acr.UserDialogs;
 
 namespace MoviesInfo.Sqlite
 {
@@ -17,11 +18,35 @@ namespace MoviesInfo.Sqlite
         {
             conn = new SQLiteAsyncConnection(dbPath);
             conn.CreateTableAsync<Person>().Wait();
-        }      
+        }
 
-        public async Task AddNewPersonAsync(string nome,string data_nasc,string celular,string genero,string nacionalidade,string estado,string cidade,string bairro)
+        public async Task AddNewPersonAsync(string nome, string data_nasc, string celular, string genero, string nacionalidade, string estado, string cidade, string bairro)
         {
-
+            try
+            {
+                if (string.IsNullOrEmpty(nome))
+                    if (string.IsNullOrEmpty(nome))
+                        throw new Exception("Digite um nome valido");
+                //StatusMessage = string.Format("{0} Adicionado o  [Name: {1}]", result, name);
+                var result = await conn.InsertAsync(new Person
+                {
+                    Name = nome,
+                    DataBirth = data_nasc,
+                    Telephone = celular,
+                    Genre = genero,
+                    Nationality = nacionalidade,
+                    States = estado,
+                    City = cidade,
+                    Neighborhood = bairro
+                });
+                StatusMessage = string.Format("{0} Adicionado o [Name: {1}]", result, nome);
+               
+            }
+            catch (Exception ex)
+            {
+                //StatusMessage = string.Format("Ja foi adicionado{0}. : {1}", name, ex.Message);
+                StatusMessage = string.Format("Ja foi adicionado {0}. : {1}", nome, ex.Message);
+            }
         }
 
         public Task<List<Person>> GetAllDataAsync()
@@ -38,6 +63,7 @@ namespace MoviesInfo.Sqlite
                 if (string.IsNullOrEmpty(id.ToString()) && string.IsNullOrEmpty(id.ToString()))
                     throw new Exception("Nome Invalido para deletar");
                 await conn.QueryAsync<Person>("DELETE FROM [lista] WHERE [Id] = " + id);
+                StatusMessage = string.Format("Deletado com Sucesso");
             }
             catch (Exception ex)
             {
