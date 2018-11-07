@@ -27,7 +27,7 @@ namespace MoviesInfo.Sqlite
                 if (string.IsNullOrEmpty(nome))
                     if (string.IsNullOrEmpty(nome))
                         throw new Exception("Digite um nome valido");
-                //StatusMessage = string.Format("{0} Adicionado o  [Name: {1}]", result, name);
+               
                 var result = await conn.InsertAsync(new Person
                 {
                     Name = nome,
