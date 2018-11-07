@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MoviesInfo.Views.Templates.MovieItem">
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView" 
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MoviesInfo.Views.Templates.MovieItem">
     <ContentView.Content>
         <Frame Margin="5,5,5,5" Padding="0" HasShadow="true" OutlineColor="White">
             <Grid Padding="5,5,5,5">
@@ -12,10 +16,14 @@
                     <ColumnDefinition Width="100" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <ffimageloading:CachedImage Grid.Row="0" HeightRequest="120" WidthRequest="100" Aspect="AspectFit" Grid.Column="0" Grid.RowSpan="3" Source="{Binding Poster_path}" />
-                <Label x:Name="title" Grid.Row="0" Grid.Column="1" Text="{Binding Title,StringFormat='Title : {0:N}'}}" VerticalTextAlignment="End" HorizontalTextAlignment="Start" FontSize="Medium" TextColor="Gray" FontAttributes="Bold" />
-                <Label x:Name="release" Grid.Row="1" Grid.Column="1" Text="{Binding Release_date,StringFormat='Release Date : {0:N}'}}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontSize="Small" TextColor="Gray" FontAttributes="Bold" />
-                <Label x:Name="genre" Grid.Row="2" Grid.Column="1" Text="{Binding GenresOut,StringFormat='Genre : {0:N}'}}" VerticalTextAlignment="Start" HorizontalTextAlignment="Start" FontSize="Small" TextColor="Gray" FontAttributes="Bold" />
+                <ffimageloading:CachedImage Grid.Row="0" HeightRequest="120" WidthRequest="100" Aspect="AspectFit" Grid.Column="0" 
+                                            Grid.RowSpan="3" Source="{Binding Poster_path}" />
+                <Label x:Name="title" Grid.Row="0" Grid.Column="1" Text="{Binding Title,StringFormat='Title : {0:N}'}}" VerticalTextAlignment="End" 
+                       HorizontalTextAlignment="Start" FontSize="Medium" TextColor="Gray" FontAttributes="Bold" />
+                <Label x:Name="release" Grid.Row="1" Grid.Column="1" Text="{Binding Release_date,StringFormat='Release Date : {0:N}'}}" 
+                       VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontSize="Small" TextColor="Gray" FontAttributes="Bold" />
+                <Label x:Name="genre" Grid.Row="2" Grid.Column="1" Text="{Binding GenresOut,StringFormat='Genre : {0:N}'}}" VerticalTextAlignment="Start"
+                       HorizontalTextAlignment="Start" FontSize="Small" TextColor="Gray" FontAttributes="Bold" />
             </Grid>
         </Frame>
     </ContentView.Content>
