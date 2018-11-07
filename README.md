@@ -1,5 +1,5 @@
 # MovieInfoUPF
-MovieInfoUPF e um aplicativo implementado em aulas no curso de Introduçāo ao Desenvolvimento Mobile com Xamarin Forms em Curso de Extensão na Universidade de Passo Fundo - RS
+MovieInfoUPF e um aplicativo implementado em aulas no curso de Introduçāo ao Desenvolvimento Mobile com Xamarin Forms em Curso de Extensão na Universidade de Passo Fundo - RS, detendo-se a implementações sem o Pattern Design MVVM, o que podera sofrer nova alteração mais adiante.
 
 ## Layout/Design
 O Layout/Design foi baseado em https://snppts.io/snippet/85
