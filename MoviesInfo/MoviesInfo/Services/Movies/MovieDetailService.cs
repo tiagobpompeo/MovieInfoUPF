@@ -11,6 +11,7 @@ namespace MoviesInfo.Services.Movies
     {
         public string content;
         public string page;
+
         private HttpClient GetClient()
         {
             HttpClient client = new HttpClient();
@@ -20,7 +21,6 @@ namespace MoviesInfo.Services.Movies
 
         public async Task<Response> GetAllDetail(string movie)
         {
-
             try
             {
                 string id = movie;
@@ -33,10 +33,11 @@ namespace MoviesInfo.Services.Movies
                     content = await response.Content.ReadAsStringAsync();
                 }
                 var resultado = JsonConvert.DeserializeObject<MovieDetailsClass>(content);
+                
                 return new Response
                 {
                     IsSuccess = true,
-                    Resultado = resultado
+                    ResultadoDetail = resultado
                 };
             }
             catch (Exception ex)
@@ -47,8 +48,6 @@ namespace MoviesInfo.Services.Movies
                     Message = ex.Message,
                 };
             }
-
-
         }
 
 
@@ -81,10 +80,6 @@ namespace MoviesInfo.Services.Movies
                     Message = ex.Message,
                 };
             }
-
-
         }
-
-
     }
 }

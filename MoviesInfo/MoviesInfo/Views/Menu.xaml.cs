@@ -38,6 +38,7 @@ namespace MoviesInfo.Views
 
             _menuItems = new ObservableCollection<ItemsMenu>()
             {
+
                 new ItemsMenu()
                 {
                     Title = "Main Page",
@@ -88,6 +89,12 @@ namespace MoviesInfo.Views
                     Title = "Movies Page",
                     Icon = "download",
                     Id=9
+                },
+                new ItemsMenu()
+                {
+                    Title = "Main Page Final",
+                    Icon = "download",
+                    Id=10
                 }
             };
 
@@ -136,6 +143,9 @@ namespace MoviesInfo.Views
                     break;
                 case 9:
                     await Navigation.PushModalAsync(new MasterDetail(9));
+                    break;
+                case 10:
+                    await Navigation.PushModalAsync(new MasterDetail(10));
                     break;
                 default:
                     Console.WriteLine("Default case");

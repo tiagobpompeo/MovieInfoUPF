@@ -51,9 +51,7 @@ namespace MoviesInfo.Services.Movies
                 };
             }
 
-
         }
-
 
     }
 }

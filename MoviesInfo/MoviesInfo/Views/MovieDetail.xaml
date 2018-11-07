@@ -155,7 +155,7 @@
                         <StackLayout Grid.Row="1">
                             <StackLayout Orientation="Horizontal">
                                 <Label Text="Similares" Style="{StaticResource DetailTitleStyle}" />
-                                <Label Text="{Binding Titles}" Style="{StaticResource DetailTitleStyle}" />
+                                <Label Text="{Binding Title}" Style="{StaticResource DetailTitleStyle}" />
                             </StackLayout>
                             <!-- <flv:FlowListView x:Name="similar" FlowItemsSource="{Binding SimilarMovies}" BackgroundColor="{StaticResource BackgroundColor}" FlowColumnCount="3" FlowColumnExpand="First" SeparatorVisibility="None" HasUnevenRows="True" HeightRequest="350">-->
                             <!--  <flv:FlowListView.FlowColumnTemplate>

@@ -10,8 +10,6 @@ namespace MoviesInfo.Services.Connection
     {
         private readonly IRequestProvider _requestProvider;
 
-       
-
         public async Task<Response> CheckConnection()
         {
 
@@ -50,11 +48,7 @@ namespace MoviesInfo.Services.Connection
                     IsSuccess = false,
                     Message = ex.Message,
                 };
-            }
-
-
-
-           
+            }          
         }
     }
 }

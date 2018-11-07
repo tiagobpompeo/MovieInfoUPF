@@ -36,7 +36,11 @@ namespace MoviesInfo.Services
             set;
         }
 
-
+        public object ResultadoDetail
+        {
+            get;
+            set;
+        }
 
 
         public string Count
