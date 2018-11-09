@@ -25,6 +25,7 @@ namespace MoviesInfo.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
+            //acesso a pasta do nosso aplicativo criando a base de dados com seu respectivo nome
             string dbPath = FileAccessHelper.GetLocalFilePath("lista.db3");
             LoadApplication(new App(dbPath));
             return base.FinishedLaunching(app, options);

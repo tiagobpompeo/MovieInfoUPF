@@ -20,7 +20,8 @@ namespace MoviesInfo.Droid
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init(true);
-            string dbPath = FileAccessHelper.GetLocalFilePath("lista.db3");//banco da lista de compras
+            //acesso a pasta do nosso aplicativo criando a base de dados com seu respectivo nome
+            string dbPath = FileAccessHelper.GetLocalFilePath("lista.db3");
             UserDialogs.Init(this);
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);

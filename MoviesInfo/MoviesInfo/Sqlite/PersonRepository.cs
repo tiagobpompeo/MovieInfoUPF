@@ -16,6 +16,11 @@ namespace MoviesInfo.Sqlite
 
         public PersonRepository(string dbPath)
         {
+            /* Conexão tem dois construtores e alguns parâmetros opcionais
+                 ▪ Banco especificado pelo databasePath
+                 ▪ true para storeDateTimeAsTicks(armazenar data e hora)
+                 ▪ usar os openFlags para controlar os sinalizadores Read | Write | Sharing(sinalizadores para aberturas de arquivos).
+            */
             conn = new SQLiteAsyncConnection(dbPath);
             conn.CreateTableAsync<Person>().Wait();
         }
@@ -38,7 +43,7 @@ namespace MoviesInfo.Sqlite
                     States = estado,
                     City = cidade,
                     Neighborhood = bairro
-                });
+                }).ConfigureAwait(continueOnCapturedContext: false);
                 StatusMessage = string.Format("{0} Adicionado o [Name: {1}]", result, nome);
                
             }
