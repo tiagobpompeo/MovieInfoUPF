@@ -20,14 +20,14 @@ namespace MoviesInfo.Views
         private readonly IMovieDetails _movieDetailService;
         readonly MoviesDetailsManager managerMoviesDetail = new MoviesDetailsManager();
         #region Services
-        private ApiService apiService;
+        private NetWorkService apiService;
         readonly IList<Models.MoviesNewClass.Resultado> SimilarMovies = new ObservableCollection<Models.MoviesNewClass.Resultado>();
         #endregion
         public readonly MoviesManager managerMovies = new MoviesManager();
         public MovieDetail2(string id)
         {
             InitializeComponent();
-            this.apiService = new ApiService();
+            this.apiService = new NetWorkService();
 
             _movieDetailService = new MovieDetailService();
 

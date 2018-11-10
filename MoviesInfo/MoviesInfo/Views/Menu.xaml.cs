@@ -95,7 +95,14 @@ namespace MoviesInfo.Views
                     Title = "Main Page Final",
                     Icon = "download",
                     Id=10
+                },
+                new ItemsMenu()
+                {
+                    Title = "Main Page MVVM",
+                    Icon = "download",
+                    Id=11
                 }
+               
             };
 
 
@@ -146,6 +153,9 @@ namespace MoviesInfo.Views
                     break;
                 case 10:
                     await Navigation.PushModalAsync(new MasterDetail(10));
+                    break;
+                case 11:
+                    await Navigation.PushModalAsync(new MasterDetail(11));
                     break;
                 default:
                     Console.WriteLine("Default case");

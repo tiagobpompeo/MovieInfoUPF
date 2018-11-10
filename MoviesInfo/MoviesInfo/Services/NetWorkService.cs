@@ -1,14 +1,14 @@
 ﻿using System;
-using System;
+
 using System.Collections.Generic;
-using System.Collections.Generic;
+
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using MoviesInfo.Data;
 using MoviesInfo.Models;
-using MoviesInfo.Models;
+
 using MoviesInfo.Services;
 using Newtonsoft.Json;
 using Plugin.Connectivity;
@@ -18,7 +18,7 @@ using Xamarin.Forms;
 
 namespace MoviesInfo.Services
 {
-    public class ApiService
+    public class NetWorkService
     {
         public string data;
 

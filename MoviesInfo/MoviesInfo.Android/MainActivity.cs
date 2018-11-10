@@ -9,6 +9,8 @@ using Android.OS;
 using FFImageLoading.Forms.Droid;
 using MoviesInfo.Droid.Helpers;
 using Acr.UserDialogs;
+using Android.Net;
+using Android.Content;
 
 namespace MoviesInfo.Droid
 {
@@ -20,7 +22,10 @@ namespace MoviesInfo.Droid
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init(true);
-            //acesso a pasta do nosso aplicativo criando a base de dados com seu respectivo nome
+            //Verificando Informacoes de Rede em Android
+            ConnectivityManager conn = (ConnectivityManager)Application.Context.GetSystemService(Context.ConnectivityService);
+            bool isConnected = conn.ActiveNetworkInfo != null && conn.ActiveNetworkInfo.IsConnected;
+                                   //acesso a pasta do nosso aplicativo criando a base de dados com seu respectivo nome
             string dbPath = FileAccessHelper.GetLocalFilePath("lista.db3");
             UserDialogs.Init(this);
             base.OnCreate(savedInstanceState);

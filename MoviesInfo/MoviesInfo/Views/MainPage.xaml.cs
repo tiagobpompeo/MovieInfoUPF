@@ -20,7 +20,7 @@ namespace MoviesInfo.Views
         public string _release_date;
         public string _genresOut;
         #region Services
-        private ApiService apiService;
+        private NetWorkService apiService;
         #endregion
 
         public MainPage()
@@ -32,7 +32,7 @@ namespace MoviesInfo.Views
                 var nameApp = Application.Current.Properties["appName"];
                 //lblWelcome.Text = nameApp.ToString();
             }
-            this.apiService = new ApiService();
+            this.apiService = new NetWorkService();
             ReturnData();
             BindingContext = ListMovies;             
         }

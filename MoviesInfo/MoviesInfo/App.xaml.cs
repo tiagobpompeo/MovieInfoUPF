@@ -5,6 +5,7 @@ using Xamarin.Forms.Xaml;
 using MoviesInfo.Sqlite;
 using MoviesInfo.Models;
 using MoviesInfo.LottieAnimation;
+using Plugin.Connectivity;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace MoviesInfo
@@ -19,7 +20,14 @@ namespace MoviesInfo
         {
             InitializeComponent();
             PersonRepository = new PersonRepository(dbPath);
+
+            //       
             MainPage = new SplashScreen();
+            //MainPage = CrossConnectivity.Current.IsConnected ? (Page)new SplashScreen() : new NoNetworkPage();
+            //CrossConnectivity.Current.ConnectivityChanged += (sender, e) =>
+            //{
+            //    bool stillConnected = e.IsConnected;
+            //};
             //MainPage = new AnimacaoLottie();
         }
 
