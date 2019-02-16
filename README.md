@@ -8,6 +8,6 @@ O Layout/Design foi baseado em https://snppts.io/snippet/85
 Utilizando como base de Dados o The Movie DB https://developers.themoviedb.org/4/getting-started/authorization
 
 ![Alt text](https://github.com/tiagobpompeo/MovieInfoUPF/blob/master/MoviesInfo/MoviesInfo.Android/Resources/drawable/Screenshot_20190110-225008.jpg)
-![Alt text](https://github.com/tiagobpompeo/MovieInfoUPF/blob/master/MoviesInfo/MoviesInfo.Android/Resources/drawable/Screenshot_20190110-225008.jpg)
+
 ![Alt text](https://github.com/tiagobpompeo/MovieInfoUPF/blob/master/MoviesInfo/MoviesInfo.Android/Resources/drawable/Screenshot_20190110-225004.jpg)
 ![Alt text](https://github.com/tiagobpompeo/MovieInfoUPF/blob/master/MoviesInfo/MoviesInfo.Android/Resources/drawable/Screenshot_20190110-224952.jpg)
