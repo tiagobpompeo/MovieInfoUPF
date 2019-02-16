@@ -6,3 +6,8 @@ O Layout/Design foi baseado em https://snppts.io/snippet/85
 
 ## Base de Dados
 Utilizando como base de Dados o The Movie DB https://developers.themoviedb.org/4/getting-started/authorization
+
+![Alt text]()
+![Alt text]()
+![Alt text]()
+![Alt text]()
